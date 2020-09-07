@@ -10,9 +10,23 @@
 .sidebar {
   display: flex;
   flex-direction: column;
+  background-color: sandybrown;
+}
+
+.chatroom-page-container {
+  display: flex;
+  flex-direction: column;
+  background-color: lightslategray;
+}
+
+.chatroom-list {
+  border: solid red;
 }
 
 .chatroom-page {
-  display: flex;
-  flex-direction: column;
+  border: solid red;
+}
+
+.chatroom {
+  border: solid blue
 }

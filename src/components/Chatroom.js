@@ -5,11 +5,11 @@ import MessageInput from './MessageInput'
 export class Chatroom extends Component {
     render() {
         return (
-            <>
+            <div className="chatroom">
                 <h1>CHATROOM</h1>
                 <Messages />
                 <MessageInput/>
-            </>
+            </div>
         )
     }
 }

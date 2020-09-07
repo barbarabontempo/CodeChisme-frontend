@@ -1,13 +1,34 @@
 import React, { Component } from 'react'
 
 export class MessageInput extends Component {
+    state = {
+        message: '',
+        chatroom_id: ''
+      };
+
+      handleChange = e => {
+        this.setState({ title: e.target.value });
+      };
+    
+      //handle submit would handle the fetch post request???
+
     render() {
         return (
             <>
-                <h1>MESSAGE FORM/INPUT</h1>
+          <form onSubmit={this.handleSubmit}>
+            <label>New Message:</label>
+            <br />
+            <input
+              type="text"
+              value={this.state.message}
+              onChange={this.handleChange}
+            />
+            <input type="submit" value="send"/>
+          </form>
             </>
         )
     }
 }
 
 export default MessageInput
+
