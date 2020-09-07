@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Dashboard = (props) => {
+const IMContainer = (props) => {
     return (
         <div>
             <h1>Dashboard</h1>
@@ -9,4 +9,4 @@ const Dashboard = (props) => {
     )
 }
 
-export default Dashboard
+export default IMContainer

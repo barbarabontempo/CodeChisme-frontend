@@ -3,7 +3,7 @@ import './App.css';
 
 import { BrowserRouter, Switch, Route  } from "react-router-dom"
 import Home from './components/Home';
-import Dashboard from './components/Dashboard';
+import IMContainer from './components/IMContainer';
 import axios from 'axios'
 
 export default class App extends React.Component {
@@ -68,7 +68,7 @@ export default class App extends React.Component {
           exact 
           path={"/dashboard"}
           render={props => ( 
-            <Dashboard {...props} loggedInStatus={this.state.loggedInStatus} />
+            <IMContainer {...props} loggedInStatus={this.state.loggedInStatus} />
           )}
           />
 
