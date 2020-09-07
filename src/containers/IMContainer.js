@@ -18,7 +18,7 @@ export default class Imcontainer extends React.Component {
   render() {
     return (
       <div>
-        <div className="ui two column doubling stackable grid container im-container" id="im-container">
+        <div className="im-container" >
           <div className="side-bar">
             <h1>Dashboard</h1>
             <h1>Status: {this.loggedInStatus}</h1>
