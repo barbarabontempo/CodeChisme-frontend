@@ -1,9 +1,8 @@
 import React from 'react';
 import './App.css';
-
 import { BrowserRouter, Switch, Route  } from "react-router-dom"
-import Home from './components/Home';
-import IMContainer from './components/IMContainer';
+import Home from './containers/Home';
+import IMContainer from './containers/IMContainer';
 import axios from 'axios'
 
 export default class App extends React.Component {
@@ -61,14 +60,14 @@ export default class App extends React.Component {
           exact 
           path={"/"} 
           render={props => (
-            <Home {...props} handleLogin={this.handleLogin} loggedInStatus={this.state.loggedInStatus} handleLogout={this.handleLogout}/>
+            <Home {...props} handleLogin={this.handleLogin} loggedInStatus={this.state.loggedInStatus} />
           )}
           />
           <Route 
           exact 
           path={"/dashboard"}
           render={props => ( 
-            <IMContainer {...props} loggedInStatus={this.state.loggedInStatus} />
+            <IMContainer {...props} loggedInStatus={this.state.loggedInStatus} handleLogout={this.handleLogout}/>
           )}
           />
 
