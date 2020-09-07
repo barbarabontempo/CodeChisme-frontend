@@ -19,14 +19,14 @@ export default class Imcontainer extends React.Component {
     return (
       <div>
         <div className="im-container" >
-          <div className="side-bar">
+          <div className="sidebar">
             <h1>Dashboard</h1>
             <h1>Status: {this.loggedInStatus}</h1>
             <h2>New Chatroom +</h2>
             <ListOfChatrooms />
             <button onClick={this.handleLogoutClick}>L❤️GOUT </button>
           </div> 
-          <div className="chatroom-page">
+          <div className="chatroom-page-container">
           <ChatroomPage />
           </div>
         </div>

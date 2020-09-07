@@ -4,6 +4,15 @@
   flex-wrap: wrap;
   align-items: stretch;
   padding: 0;
-border: solid salmon !important;
+  border: solid salmon !important;
 }
 
+.sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+.chatroom-page {
+  display: flex;
+  flex-direction: column;
+}
