@@ -67,7 +67,7 @@ export default class App extends React.Component {
           exact 
           path={"/dashboard"}
           render={props => ( 
-            <IMContainer {...props} loggedInStatus={this.state.loggedInStatus} handleLogout={this.handleLogout}/>
+            <IMContainer {...props} loggedInStatus={this.state.loggedInStatus} handleLogout={this.handleLogout} user={this.state.user}/>
           )}
           />
 

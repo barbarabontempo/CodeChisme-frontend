@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 
-export class MessageInput extends Component {
+export class MessageForm extends Component {
     state = {
         message: '',
-        chatroom_id: ''
+        chatroom_id: '',
+        user_id: ''
       };
 
       handleChange = e => {
@@ -30,5 +31,5 @@ export class MessageInput extends Component {
     }
 }
 
-export default MessageInput
+export default MessageForm
 

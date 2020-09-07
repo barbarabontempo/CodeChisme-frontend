@@ -7,7 +7,7 @@ export class ChatroomPage extends Component {
         return (
             <div className="chatroom-page">
                 <h1>CHATROOM PAGE</h1>
-                <Chatroom />
+                <Chatroom user={this.props.user}/>
             </div>
         )
     }

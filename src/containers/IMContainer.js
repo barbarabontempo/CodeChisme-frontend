@@ -27,7 +27,7 @@ export default class Imcontainer extends React.Component {
             <button onClick={this.handleLogoutClick}>L❤️GOUT </button>
           </div> 
           <div className="chatroom-page-container">
-          <ChatroomPage />
+          <ChatroomPage user={this.props.user}/>
           </div>
         </div>
       </div>
