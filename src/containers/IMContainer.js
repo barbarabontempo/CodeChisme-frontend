@@ -9,7 +9,7 @@ export default class Imcontainer extends React.Component {
   state = {
     isShown: false,
     chatrooms: [],
-    chatroom_id: "",
+    chatroom_id: 1,
     currentChatroom: "",
   };
 
@@ -53,10 +53,12 @@ export default class Imcontainer extends React.Component {
     let foundChat = this.state.chatrooms.find((chatroom) => chatroom.id === id);
     this.setState({
       currentChatroom: foundChat,
+      chatroom_id: id
     });
   };
 
   render() {
+    console.log("this is in the im", this.state)
     return (
       <div>
         <div className="im-container">

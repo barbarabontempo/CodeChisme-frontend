@@ -3,7 +3,7 @@ import Chatroom from "../components/Chatroom";
 
 export class ChatroomPage extends Component {
   state = {
-    chatsmessages: [],
+    chatsmessages: []
   };
 
   updatesState = (newMsg) => {
@@ -12,14 +12,30 @@ export class ChatroomPage extends Component {
     }));
   };
 
-  chatsMsg = () => {
-      // console.log(this.props.currentChatroom)
+  chatsMsg = (data) => {
+    console.log("this is data from cM", data)
     this.setState({
-        chatsmessages: [...this.props.currentChatroom.messages]
+        chatsmessages: [...data.messages]
     })
   }
 
+  componentDidMount(){
+    fetch(`http://localhost:3000/chatrooms/${this.props.chatroomId}`)
+    .then(r => r.json())
+    .then(data => this.chatsMsg(data))
+
+  }
+
+  componentDidUpdate(previousProps){
+    if (previousProps.chatroomId !== this.props.chatroomId) {
+      fetch(`http://localhost:3000/chatrooms/${this.props.chatroomId}`)
+      .then(r => r.json())
+      .then(data => this.chatsMsg(data))
+    } 
+  }
+
   render() {
+    console.log("line 40", this.state);
     return (
       <div className="chatroom-page">
         <h1>CHATROOM PAGE</h1>
