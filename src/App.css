@@ -3,3 +3,11 @@
 padding: 50%;
 border: solid salmon !important;
 } */
+
+.ui.grid>.column:not(.row) {
+  padding: 6rem ;
+  margin-top: 4em;
+  align-content: space-around;
+
+}
+

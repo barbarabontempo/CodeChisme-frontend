@@ -12,19 +12,20 @@ export class ChatroomPage extends Component {
     }));
   };
 
-//   chatsMsg = () => {
-//       console.log(this.props.currentChatroom)
-//     this.setState({
-//         chatsmessages: this.props.currentChatroom.messages
-//     })
-// }
-
+  chatsMsg = () => {
+      // console.log(this.props.currentChatroom)
+    this.setState({
+        chatsmessages: [...this.props.currentChatroom.messages]
+    })
+  }
 
   render() {
     return (
       <div className="chatroom-page">
         <h1>CHATROOM PAGE</h1>
+        
         <Chatroom
+
           user={this.props.user}
           currentChatroom={this.props.currentChatroom}
           updatesState={this.updatesState}

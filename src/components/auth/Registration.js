@@ -38,51 +38,88 @@ export default class Registration extends Component {
   };
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <input
-            type="text"
-            name="name"
-            placeholder="name"
-            value={this.state.name}
-            onChange={this.handleChange}
-            required
-          />
-          <input
-            type="text"
-            name="username"
-            placeholder="username"
-            value={this.state.username}
-            onChange={this.handleChange}
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="email"
-            value={this.state.email}
-            onChange={this.handleChange}
-            required
-          />
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            value={this.state.password}
-            onChange={this.handleChange}
-            required
-          />
-          <input
-            type="password"
-            name="password_confirmation"
-            placeholder="Password Confirmation"
-            value={this.state.password_confirmation}
-            onChange={this.handleChange}
-            required
-          />
+      <div className="">
+        <div className="ui card">
+        <form className="ui form"onSubmit={this.handleSubmit}>
+        {/* "https://icon-library.com/images/cat-icon-png/cat-icon-png-0.jpg */}
+          <div className="ui container content" >
+            <h3 className="ui center aligned icon header">Chiśme Up
+              <img src="https://icon-library.com/images/cat-icon-png/cat-icon-png-0.jpg"/>
+           </h3>
+          </div>     
+                 
+                <div className="">
+                      <div calssName = "ui focus field">
+                        <input
+                        type="text"
+                        name="name"
+                        placeholder="Name"
+                        value={this.state.name}
+                        onChange={this.handleChange}
+                        required
+                        />
+                      </div>
 
-          <button type="submit"> Register </button>
+                      <div className= "field">
+                          <input
+                          type="text"
+                          name="username"
+                          placeholder="username"
+                          value={this.state.username}
+                          onChange={this.handleChange}
+                          required
+                        />
+                      </div>
+                </div>
+         
+
+            <div className="ui right labeled input">
+              <input
+              type="email"
+              name="email"
+              placeholder="email"
+              value={this.state.email}
+              onChange={this.handleChange}
+              required
+              />
+              <div className="ui label">
+                <div class="text">.com</div>
+              </div>
+            </div>
+
+            <div className="">
+
+              <div className="">
+    
+
+                <div className="field">
+                  <input
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                  value={this.state.password}
+                  onChange={this.handleChange}
+                  required
+                  />
+                </div>
+
+                <div className="field">
+                  <input
+                  type="password"
+                  name="password_confirmation"
+                  placeholder="Password Confirmation"
+                  value={this.state.password_confirmation}
+                  onChange={this.handleChange}
+                  required
+                  />
+                </div>
+
+              </div>
+            </div>
+
+          <button className="ui button teal" type="submit"> Register </button>
         </form>
+        </div>
       </div>
     );
   }

@@ -26,6 +26,7 @@ export default class Imcontainer extends React.Component {
 
   handleAllChats = () => {
     axios.get("http://localhost:3000/chatrooms").then((resp) => {
+      console.log("inside the handle all chats ", resp);
       this.setState({
         chatrooms: resp.data,
       });
@@ -59,6 +60,7 @@ export default class Imcontainer extends React.Component {
     return (
       <div>
         <div className="im-container">
+          <div className="column"> 
           <div className="sidebar">
             <h1>CodeChisme</h1>
             <h1>Status: {this.loggedInStatus}</h1>
@@ -72,6 +74,9 @@ export default class Imcontainer extends React.Component {
 
             <button onClick={this.handleLogoutClick}>L❤️GOUT </button>
           </div>
+          </div>
+
+
           <div className="chatroom-list-container">
             <ListOfChatrooms
               renderChatroom={this.renderChatroom}
