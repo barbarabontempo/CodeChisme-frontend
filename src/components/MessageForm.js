@@ -1,35 +1,51 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 export class MessageForm extends Component {
-    state = {
-        message: '',
-        chatroom_id: '',
-        user_id: ''
-      };
+  state = {
+    content: "",
+    user_id: "",
+    chatroom_id: "",
+  };
 
-      handleChange = e => {
-        this.setState({ title: e.target.value });
-      };
-    
-      //handle submit would handle the fetch post request???
+  handleChange = (e) => {
+    this.setState({
+      content: e.target.value,
+      user_id: this.props.user.id,
+      chatroom_id: this.props.chatroomId,
+    });
+  };
 
-    render() {
-        return (
-            <>
-          <form onSubmit={this.handleSubmit}>
-            <label>New Message:</label>
-            <br />
-            <input
-              type="text"
-              value={this.state.message}
-              onChange={this.handleChange}
-            />
-            <input type="submit" value="send"/>
-          </form>
-            </>
-        )
-    }
+  handleSubmit = (event) => {
+    event.preventDefault();
+    fetch("http://localhost:3000/messages", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(this.state),
+    })
+      .then((r) => r.json())
+      .then((msgThing) => {
+        this.props.updatesState(msgThing);
+      });
+  };
+
+  render() {
+    return (
+      <>
+        <form onSubmit={this.handleSubmit}>
+          <label>New Message:</label>
+          <br />
+          <input
+            type="text"
+            value={this.state.message}
+            onChange={this.handleChange}
+          />
+          <input type="submit" value="send" />
+        </form>
+      </>
+    );
+  }
 }
 
-export default MessageForm
-
+export default MessageForm;

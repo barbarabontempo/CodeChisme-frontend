@@ -1,9 +1,11 @@
 import React from 'react'
 
-export default function Messages() {
+export default function Messages(props) {
+  
+console.log("our message", props)
     return (
         <>
-            <h1>MESSAGEZ</h1>
+            <h1>{props}</h1>
         </>
     )
 }

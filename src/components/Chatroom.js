@@ -1,17 +1,23 @@
-import React, { Component } from 'react'
-import Messages from './Messages'
-import MessageInput from './MessageForm'
+import React, { Component } from "react";
+import Messages from "./Messages";
+import MessageForm from "./MessageForm";
 
 export class Chatroom extends Component {
-    render() {
-        return (
-            <div className="chatroom">
-                <h1>CHATROOM</h1>
-                <Messages />
-                <MessageInput user={this.props.user}/>
-            </div>
-        )
-    }
+
+renderingMessages = () => {
+   return this.props.chatsmessages.map(message =>  <Messages msg={message}/>)
+}   
+
+  render() {
+
+    return (
+      <div className="chatroom">
+        <h1>CHATROOM</h1>
+        {this.props.currentChatroom !== "" ? this.renderingMessages() : null }
+        <MessageForm user={this.props.user} chatroomId={this.props.currentChatroom.id} updatesState={this.props.updatesState}/>
+      </div>
+    );
+  }
 }
 
-export default Chatroom
+export default Chatroom;

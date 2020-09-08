@@ -2,8 +2,17 @@ import React from "react";
 import axios from "axios";
 import ListOfChatrooms from "./ListOfChatrooms";
 import ChatroomPage from "./ChatroomPage";
+import NewChatroomForm from "../components/NewChatroomForm";
+import { Button, Modal } from "semantic-ui-react";
 
 export default class Imcontainer extends React.Component {
+  state = {
+    isShown: false,
+    chatrooms: [],
+    chatroom_id: "",
+    currentChatroom: "",
+  };
+
   handleLogoutClick = () => {
     axios
       .delete("http://localhost:3000/logout", { withCredentials: true })
@@ -15,19 +24,66 @@ export default class Imcontainer extends React.Component {
       });
   };
 
+  handleAllChats = () => {
+    axios.get("http://localhost:3000/chatrooms").then((resp) => {
+      this.setState({
+        chatrooms: resp.data,
+      });
+    });
+  };
+
+  componentDidMount() {
+    this.handleAllChats();
+  }
+
+  clickToShowModal = () => {
+    this.setState((prevState) => ({
+      isShown: !prevState.isShown,
+    }));
+  };
+
+  handleNewChat = (newchat) => {
+    this.setState((prevState) => ({
+      chatrooms: [...prevState.chatrooms, newchat.data],
+    }));
+  };
+
+  renderChatroom = (id) => {
+    let foundChat = this.state.chatrooms.find((chatroom) => chatroom.id === id);
+    this.setState({
+      currentChatroom: foundChat,
+    });
+  };
+
   render() {
     return (
       <div>
-        <div className="im-container" >
+        <div className="im-container">
           <div className="sidebar">
-            <h1>Dashboard</h1>
+            <h1>CodeChisme</h1>
             <h1>Status: {this.loggedInStatus}</h1>
-            <h2>New Chatroom +</h2>
-            <ListOfChatrooms />
+
+            <Modal
+              trigger={<Button>NEW CHATROOM</Button>}
+              header="Create a new chatroom!"
+              content={<NewChatroomForm handleNewChat={this.handleNewChat} />}
+              actions={[{ key: "done", content: "HUH", positive: false }]}
+            />
+
             <button onClick={this.handleLogoutClick}>L❤️GOUT </button>
-          </div> 
+          </div>
+          <div className="chatroom-list-container">
+            <ListOfChatrooms
+              renderChatroom={this.renderChatroom}
+              chats={this.state.chatrooms}
+            />
+          </div>
           <div className="chatroom-page-container">
-          <ChatroomPage user={this.props.user}/>
+            <ChatroomPage
+              chatroomId={this.state.chatroom_id}
+              user={this.props.user}
+              currentChatroom={this.state.currentChatroom}
+            />
           </div>
         </div>
       </div>

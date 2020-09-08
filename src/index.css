@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   align-items: stretch;
   padding: 0;
-  border: solid salmon !important;
+  border: solid salmon ;
 }
 
 .sidebar {
@@ -25,6 +25,7 @@
 
 .chatroom-page {
   border: solid red;
+  width: max-content;
 }
 
 .chatroom {
