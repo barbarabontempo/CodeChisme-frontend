@@ -3,12 +3,12 @@ import Chatrooms from "../components/Chatrooms";
 
 export default function ListOfChatrooms(props) {
   let handleIncomingChats = () => {
-    // console.log("I WANT TO MAKE THIS PRTYYE",props)
     return props.chats.map((chat) => (
       <Chatrooms
         key={chat.id}
         renderChatroom={props.renderChatroom}
         chatObj={chat}
+        removeChatroom = {props.removeChatroom}
       />
     ));
   };

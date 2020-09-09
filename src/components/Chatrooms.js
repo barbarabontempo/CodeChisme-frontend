@@ -1,30 +1,59 @@
 import React, { Component } from "react";
+import axios from "axios";
+
 
 export class Chatrooms extends Component {
   handleRenderChatroom = () => {
     this.props.renderChatroom(this.props.chatObj.id);
   };
 
+  handleClickRemove = (e) => {
+   let msgId = this.props.chatObj.id
+    axios.delete(`http://localhost:3000/chatrooms/${msgId}`)
+    .then(res => {
+      this.props.removeChatroom(res.data.id)
+    }
+    )
+  }
+  
+
   render() {
-    const { title, amtPeople } = this.props.chatObj;
+    const {title, amtPeople} = this.props.chatObj
+    
     return (
       <div className="ui middle aligned animated list">
         <div className="item detail" onClick={this.handleRenderChatroom}>
+         
+          <button className="ui floating message">
           <img
             className="ui avatar image"
             src="https://cdn0.iconfinder.com/data/icons/cute-mono-style-line/44/iconFeedback-512.png"
             alt="message icon"
           />
-          <div className="content ui floating message">
+          <div className="content">
             <div className="header">
-              {title}
+              {title} 
+             
               <span>
-                {" "}
-                <small>pop:{amtPeople}</small>
+             
+                <small>pop: {amtPeople} </small>
               </span>
+
+              
+
+              </div>
+              <a onClick={this.handleClickRemove}>
+                  <div className="ui right corner label red">
+                      
+                      <i className= "trash alternate outline icon">  </i>
+                  </div>
+                </a>
+             
             </div>
+            </button>
+           
+            
           </div>
-        </div>
       </div>
     );
   }

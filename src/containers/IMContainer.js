@@ -50,6 +50,16 @@ export default class Imcontainer extends React.Component {
     });
   };
 
+  removeFromChatrooms = (id) => {
+    console.log("youve made it back to imCOntainer", 
+    id)
+    this.setState(prevState => ({
+      chatrooms: prevState.chatrooms.filter((room) => room.id !== id)
+    })
+    )
+  }
+  
+
   render() {
     return (
       <div>
@@ -76,6 +86,7 @@ export default class Imcontainer extends React.Component {
             <ListOfChatrooms
               renderChatroom={this.renderChatroom}
               chats={this.state.chatrooms}
+              removeChatroom = {this.removeFromChatrooms}
             />
           </div>
           <div className="chatroom-page-container">
