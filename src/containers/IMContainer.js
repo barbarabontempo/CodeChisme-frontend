@@ -4,6 +4,7 @@ import ListOfChatrooms from "./ListOfChatrooms";
 import ChatroomPage from "./ChatroomPage";
 import NewChatroomForm from "../components/NewChatroomForm";
 import { Button, Modal } from "semantic-ui-react";
+import { BrowserRouter, Switch, Route, Link  } from "react-router-dom"
 
 export default class Imcontainer extends React.Component {
   state = {
@@ -35,12 +36,6 @@ export default class Imcontainer extends React.Component {
     this.handleAllChats();
   }
 
-  clickToShowModal = () => {
-    this.setState((prevState) => ({
-      isShown: !prevState.isShown,
-    }));
-  };
-
   handleNewChat = (newchat) => {
     this.setState((prevState) => ({
       chatrooms: [...prevState.chatrooms, newchat.data],
@@ -71,10 +66,9 @@ export default class Imcontainer extends React.Component {
               actions={[{ key: "done", content: "HUH", positive: false }]}
             />
 
-            <button onClick={this.handleLogoutClick}>L❤️GOUT </button>
+<Link to="/"><button onClick={this.handleLogoutClick}>L❤️GOUT </button></Link>
           </div>
           </div>
-
 
           <div className="chatroom-list-container">
             <ListOfChatrooms

@@ -35,12 +35,11 @@ export default class Registration extends Component {
   };
   render() {
     return (
-      <div className="ui card">
-        <form className="ui form" onSubmit={this.handleSubmit}>
+      <div className="form-container sign-in-container">
+        <form className="form" onSubmit={this.handleSubmit}>
           <div className="login-form-header">
 
-            <h2 className="ui center aligned icon header">
-              <img src="https://icon-library.com/images/cat-icon-png/cat-icon-png-0.jpg"/>
+            <h2 className="form-title">
               LogIn
             </h2>
           </div>
@@ -61,7 +60,7 @@ export default class Registration extends Component {
             onChange={this.handleChange}
             required
           />
-          <button className="ui button teal" tabindex="0" type="submit"> Login </button>
+          <button className="form-button" type="submit"> Login </button>
         </form>
        
       </div>
