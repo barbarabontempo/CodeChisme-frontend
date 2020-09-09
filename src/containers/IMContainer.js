@@ -7,9 +7,8 @@ import { Button, Modal } from "semantic-ui-react";
 
 export default class Imcontainer extends React.Component {
   state = {
-    isShown: false,
     chatrooms: [],
-    chatroom_id: 1,
+    chatroom_id: "",
     currentChatroom: "",
   };
 
@@ -26,7 +25,6 @@ export default class Imcontainer extends React.Component {
 
   handleAllChats = () => {
     axios.get("http://localhost:3000/chatrooms").then((resp) => {
-      console.log("inside the handle all chats ", resp);
       this.setState({
         chatrooms: resp.data,
       });
@@ -58,7 +56,6 @@ export default class Imcontainer extends React.Component {
   };
 
   render() {
-    console.log("this is in the im", this.state)
     return (
       <div>
         <div className="im-container">
