@@ -1,12 +1,10 @@
-import React from 'react'
+import React from "react";
 
 export default function Messages(props) {
-  
-    return (
-        <>
-            <h1>{props.msg.content}</h1>
-        </>
-    )
+  return (
+    <>
+      <h1>{props.msg.content}</h1>
+      <span>{props.msg.username}</span>
+    </>
+  );
 }
-
-

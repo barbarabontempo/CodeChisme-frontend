@@ -66,8 +66,8 @@ h1 {
 
 .form-button {
   border-radius: 20px;
-  border: 1px solid #ff4b2b;
-  background-color: #ff4b2b;
+  border: 1px solid #fa1616;
+  background-color: #fa1616;
   color: #ffffff;
   font-size: 12px;
   font-weight: bold;
@@ -206,9 +206,9 @@ input {
 }
 
 .overlay {
-  background: #ff416c;
-  background: -webkit-linear-gradient(to right, #ff4b2b, #ff416c);
-  background: linear-gradient(to right, #ff4b2b, #ff416c);
+  background: #66bfbf;
+  background: -webkit-linear-gradient(to right, #66bfbf, #056674);
+  background: linear-gradient(to right, #66bfbf, #056674);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;

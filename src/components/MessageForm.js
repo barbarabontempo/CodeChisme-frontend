@@ -25,9 +25,7 @@ export class MessageForm extends Component {
       body: JSON.stringify(this.state),
     })
       .then((r) => r.json())
-      .then((msgThing) => {
-        this.props.updatesState(msgThing);
-      });
+      
   };
 
   render() {

@@ -1,73 +1,76 @@
 import React, { Component } from "react";
 import Chatroom from "../components/Chatroom";
-import consumer from "../cable"
-
-console.log("this is the consumet", consumer)
-consumer.subscriptions.create({
-  channel: "ChatroomChannel",
-  username:'neta',
-  chatroomName:"barbs",
-},{
-  connected: () => console.log("connected"),
-  
-  received: (data) => console.log("recieved", data),
-  disconnected: () => console.log("disconnected")
-})
-
-console.log("this is the consumer", consumer.subscriptions);
-
+import consumer from "../cable";
 
 export class ChatroomPage extends Component {
   state = {
-    chatsmessages: []
+    messagesInChat: [],
+    username: "",
+    chatroom: "",
   };
 
   updatesState = (newMsg) => {
     this.setState((prevState) => ({
-      chatsmessages: [...prevState.chatsmessages, newMsg],
+      messagesInChat: [...prevState.messagesInChat, newMsg],
     }));
   };
 
   chatsMsg = (data) => {
     this.setState({
-        chatsmessages: [...data.messages]
-    })
-  }
+      messagesInChat: [...data.messages],
+      username: this.props.user.username,
+      chatroom: data.title,
+    });
+  };
 
-  componentDidMount(){
-
-    fetch(`http://localhost:3000/chatrooms/${this.props.chatroomId}`)
-    .then(r => r.json())
-    .then(data => {
-        console.log(data)
-      if (data.messages){
-      this.chatsMsg(data)
+  getSubscription(){
+    consumer.subscriptions.create(
+      {
+        channel: "ChatroomChannel",
+        username: this.state.username,
+        chatroomName: this.state.chatroom
+      },
+      {
+        connected: () => console.log("connected"),
+        received: (data) => this.updatesState(data),
+        disconnected: () => console.log("disconnected"),
       }
-    })
-
+    );
   }
 
-  componentDidUpdate(previousProps){
-    
+  componentDidMount() {
+    fetch(`http://localhost:3000/chatrooms/${this.props.chatroomId}`)
+      .then((r) => r.json())
+      .then((data) => {
+        if (data.messages) {
+          this.chatsMsg(data);
+          this.getSubscription()
+        }
+      });
+  }
+
+  componentDidUpdate(previousProps) {
     if (previousProps.chatroomId !== this.props.chatroomId) {
       fetch(`http://localhost:3000/chatrooms/${this.props.chatroomId}`)
-      .then(r => r.json())
-      .then(data => {
-        this.chatsMsg(data)})
-    } 
+        .then((r) => r.json())
+        .then((data) => {
+          this.chatsMsg(data);
+          this.getSubscription()
+        });
+    }
   }
 
   render() {
+    console.log("insideRENDER", this.state)
     return (
       <div className="chatroom-page">
         <h1>CHATROOM PAGE</h1>
-        
-        <Chatroom
 
+        <Chatroom
           user={this.props.user}
           currentChatroom={this.props.currentChatroom}
           updatesState={this.updatesState}
-          chatsmessages={this.state.chatsmessages}
+          messagesInChat={this.state.messagesInChat}
         />
       </div>
     );

@@ -4,7 +4,7 @@ import ListOfChatrooms from "./ListOfChatrooms";
 import ChatroomPage from "./ChatroomPage";
 import NewChatroomForm from "../components/NewChatroomForm";
 import { Button, Modal } from "semantic-ui-react";
-import { BrowserRouter, Switch, Route, Link  } from "react-router-dom"
+import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 
 export default class Imcontainer extends React.Component {
   state = {
@@ -46,7 +46,7 @@ export default class Imcontainer extends React.Component {
     let foundChat = this.state.chatrooms.find((chatroom) => chatroom.id === id);
     this.setState({
       currentChatroom: foundChat,
-      chatroom_id: id
+      chatroom_id: id,
     });
   };
 
@@ -54,20 +54,22 @@ export default class Imcontainer extends React.Component {
     return (
       <div>
         <div className="im-container">
-          <div className="column"> 
-          <div className="sidebar">
-            <h1>CodeChisme</h1>
-            <h1>Status: {this.loggedInStatus}</h1>
+          <div className="column">
+            <div className="sidebar">
+              <h1>CodeChisme</h1>
+              <h1>Status: {this.loggedInStatus}</h1>
 
-            <Modal
-              trigger={<Button>NEW CHATROOM</Button>}
-              header="Create a new chatroom!"
-              content={<NewChatroomForm handleNewChat={this.handleNewChat} />}
-              actions={[{ key: "done", content: "HUH", positive: false }]}
-            />
+              <Modal
+                trigger={<Button>NEW CHATROOM</Button>}
+                header="Create a new chatroom!"
+                content={<NewChatroomForm handleNewChat={this.handleNewChat} />}
+                actions={[{ key: "done", content: "HUH", positive: false }]}
+              />
 
-<Link to="/"><button onClick={this.handleLogoutClick}>L❤️GOUT </button></Link>
-          </div>
+              <Link to="/">
+                <button onClick={this.handleLogoutClick}>L❤️GOUT </button>
+              </Link>
+            </div>
           </div>
 
           <div className="chatroom-list-container">

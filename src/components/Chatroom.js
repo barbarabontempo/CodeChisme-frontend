@@ -3,18 +3,22 @@ import Messages from "./Messages";
 import MessageForm from "./MessageForm";
 
 export class Chatroom extends Component {
-
-renderingMessages = () => {
-   return this.props.chatsmessages.map(message =>  <Messages msg={message}/>)
-}   
+  renderingMessages = () => {
+    return this.props.messagesInChat.map((message) => (
+      <Messages key={message.id} msg={message} />
+    ));
+  };
 
   render() {
-
     return (
       <div className="chatroom">
-        <h1>CHATROOM</h1>
-        {this.props.currentChatroom !== "" ? this.renderingMessages() : null }
-        <MessageForm user={this.props.user} chatroomId={this.props.currentChatroom.id} updatesState={this.props.updatesState}/>
+        <h1>CHATROOM: {this.props.currentChatroom.title}</h1>
+        {this.props.currentChatroom !== "" ? this.renderingMessages() : null}
+        <MessageForm
+          user={this.props.user}
+          chatroomId={this.props.currentChatroom.id}
+          updatesState={this.props.updatesState}
+        />
       </div>
     );
   }
