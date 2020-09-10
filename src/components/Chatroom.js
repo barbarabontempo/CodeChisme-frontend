@@ -11,10 +11,11 @@ export class Chatroom extends Component {
 
   render() {
     return (
-      <div className="chatroom">
+      <div className="chatroom  column">
         <h1>CHATROOM: {this.props.currentChatroom.title}</h1>
         {this.props.currentChatroom !== "" ? this.renderingMessages() : null}
         <MessageForm
+        className="chat-footer"
           user={this.props.user}
           chatroomId={this.props.currentChatroom.id}
           updatesState={this.props.updatesState}

@@ -78,8 +78,8 @@ export default class Imcontainer extends React.Component {
     console.log("line 74", this.props)
     return (
       <div>
-        <div className="im-container">
-          <div className="column">
+        <div className="im-container ui three column grid">
+          <div className="">
             <div className="sidebar">
               <h1>CodeChisme</h1>
               <h1>Status: {this.loggedInStatus}</h1>
@@ -104,7 +104,7 @@ export default class Imcontainer extends React.Component {
               removeChatroom = {this.removeFromChatrooms}
             />
           </div>
-          <div className="chatroom-page-container">
+          <div className="chatroom-page-container column">
             <ChatroomPage
               chatroomId={this.state.chatroom_id}
               user={this.props.user}

@@ -1,35 +1,66 @@
-.im-container {
+body {
+  padding: 5%;
+  background-color: #F5F5F5;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: stretch;
-  padding: 0;
-  border: solid salmon ;
+  justify-content: center;
+  align-items: center;
+}
+
+.im-container {
+  padding:0em;
+  background-color: #FFF; 
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  height: 700px;
+ 
 }
 
 .sidebar {
-  border: solid rgb(0, 255, 13);
-  display: flex;
-  flex-direction: column;
-  background-color: sandybrown;
-  z-index: 1;
-  height: 100%;
-  padding-top: 16px;
+  float: left;
+  height: 700px;;
+  width: 70%;
+  background: #5a79c0;
+  background: -webkit-linear-gradient(#4768b5, #35488e);
+  background: -o-linear-gradient(#6588db, #35488e);
+  background: -moz-linear-gradient(#5d83db, #35488e);
+  background: linear-gradient(#3b589b, #1f306d);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19);
 }
 
 .chatroom-page-container {
-  display: flex;
+  width: calc(65% - 85px);
+  padding: 0 !important;
+  /* display: flex;
   flex-direction: column;
-  background-color: lightslategray;
+  background-color: lightslategray; */
 }
 
-.chatroom-list {
-  border: solid red;
+
+.chat-footer{
+  width: calc(65% - 66px) !important;
+  height: 80px;
+  display: flex;
+  align-items:center;
+  position: absolute;
+  bottom: 0;
+  background-color: rgb(224, 219, 224) !important;
+  border-top: 2px solid #EEE;
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: rgb(238, 238, 238);
+}
+
+.chatroom-list-container {
+  width: 35%;
+  height: 700px;
+  box-shadow: 0px 8px 10px rgba(0,0,0,0.20);
+  overflow: hidden !important;
+  background-color: #87a3ec;
+  display: inline-block;
 }
 
 .chatroom-page {
   border: solid red;
-  width: max-content;
+  /* width: max-content; */
 }
 
 .chatroom {
