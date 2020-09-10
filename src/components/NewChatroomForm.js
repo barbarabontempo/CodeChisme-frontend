@@ -5,7 +5,7 @@ import ListOfChatrooms from "../containers/ListOfChatrooms";
 export default class NewChatroomForm extends Component {
   state = {
     title: "",
-    amtPeople: 1,
+    amtPeople: "",
   };
 
   handleChange = (e) => {
