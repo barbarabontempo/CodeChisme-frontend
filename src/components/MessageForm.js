@@ -17,6 +17,7 @@ export class MessageForm extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
+    
     fetch("http://localhost:3000/messages", {
       method: "POST",
       headers: {
@@ -25,7 +26,12 @@ export class MessageForm extends Component {
       body: JSON.stringify(this.state),
     })
       .then((r) => r.json())
-      
+      this.setState({
+        content: "",
+        user_id: "",
+        chatroom_id: ""
+      });
+     
   };
 
   render() {
@@ -36,7 +42,7 @@ export class MessageForm extends Component {
           <br />
           <input
             type="text"
-            value={this.state.message}
+            value={this.state.content}
             onChange={this.handleChange}
           />
           <input type="submit" value="send" />

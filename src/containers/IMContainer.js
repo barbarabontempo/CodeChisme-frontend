@@ -3,7 +3,7 @@ import axios from "axios";
 import ListOfChatrooms from "./ListOfChatrooms";
 import ChatroomPage from "./ChatroomPage";
 import NewChatroomForm from "../components/NewChatroomForm";
-import { Button, Modal } from "semantic-ui-react";
+// import { Button, Modal } from "semantic-ui-react";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import consumer from '../cable'
 
@@ -85,23 +85,29 @@ export default class Imcontainer extends React.Component {
             </div>
                 
                 <div className="sidebar-things"> 
-
-                <a>CodeChisme</a>
+                <Link to="/">
+                  <a onClick={this.handleLogoutClick}> <span>L❤️GOUT</span> </a>
+                </Link>
+                <a><i class="fa fa-expand-arrows-alt"></i>CodeChisme</a>
               
-          <a>Status: {this.props.loggedInStatus}</a>
+                <a> Status: {this.props.loggedInStatus}</a>
                
-                <a><Modal
+               <NewChatroomForm />
+                {/* <a><Modal
                   trigger={<Button>NEW CHATROOM</Button>}
                   header="Create a new chatroom!"
-                  content={<NewChatroomForm handleNewChat={this.handleNewChat} />}
+                  content={<NewChatroomForm
+                    handleNewChat={this.handleNewChat}
+
+                    />}
                   actions={['Snooze', { key: 'done', content: 'Done', positive: true }]}
                   // actions={[{ key: "done", content: "HUH", positive: false }]}
-                  /></a>
+                  />
+                  <i class="fas fa-comment-dots"></i>
+                  </a> */}
+                  {/* <NewChatroomForm /> */}
                 <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
-                <Link to="/">
-                  <button onClick={this.handleLogoutClick}>L❤️GOUT </button>
-                </Link
-                >
+              
               
                   </div>
             </div>
