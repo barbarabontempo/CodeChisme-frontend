@@ -25,7 +25,11 @@ export class ChatroomPage extends Component {
   };
 
   getSubscription(){
-    consumer.subscriptions.create(
+    if (this.subscription){
+console.log("UNSUBSCRIBING", this.state.username)
+      this.subscription.unsubscribe()
+    }
+    this.subscription = consumer.subscriptions.create(
       {
         channel: "ChatroomChannel",
         username: this.state.username,
@@ -37,6 +41,7 @@ export class ChatroomPage extends Component {
         disconnected: () => console.log("CP disconnected")
       }
     );
+  
   }
 
   componentDidMount() {
@@ -61,8 +66,13 @@ export class ChatroomPage extends Component {
     }
   }
 
+
+  componentWillUnmount(){
+    this.subscription.unsubscribe()
+  }
+
   render() {
-    // console.log("insideRENDER", this.state)
+    console.log("UNSUBSCRIBING", this.subscription)
     return (
       <div className="chatroom-page">
         <h1>CHATROOM PAGE</h1>
