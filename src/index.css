@@ -6,7 +6,7 @@ body {
   align-items: center;
 }
 
-
+/* 
 .app-container {
   padding:0em;
   background-color: #FFF; 
@@ -15,12 +15,16 @@ body {
   width: 1000px;
   display:flex;
   flex-direction: row;
-}
+} */
 
 .im-container {
-  display: flex;
+  padding:0em;
+  background-color: #FFF; 
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  height: 700px;
+  width: 1000px;
+  display:flex;
   flex-direction: row;
-  justify-content: flex-start;
 }
 
 .sidebar {
@@ -139,12 +143,23 @@ body {
   overflow: hidden !important;
   background-color: #dbe2f3;
   display: inline-block;
-
+  margin: auto;
+  padding: 5%;
 }
 
 .chatroom {
   height: 500px;
  
+}
+
+.message-form {
+  margin: auto !important;
+  padding: 5% !important;
+}
+
+.msg-input {
+  
+  padding: 5% !important;
 }
 
 .chats-messages {
@@ -156,16 +171,25 @@ body {
   overflow: auto;
   display: flex;
   flex-direction: column-reverse;
+  box-shadow: 4px 8px 3px rgba(0,0,0,0.20);
+  border-radius: 2%;
 }
 
 .message-ul{
   list-style-type: none;
+  transform: rotate(180deg);
 }
+
+
 
 .message-li{
   border: solid blueviolet;
+  transform: rotate(-180deg);
 }
 
+.detail-li {
+  transform: rotate(-180deg);
+}
 
 
 
