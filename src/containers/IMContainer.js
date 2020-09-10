@@ -78,39 +78,47 @@ export default class Imcontainer extends React.Component {
     console.log("line 74", this.props)
     return (
       <div>
-        <div className="im-container">
-          <div className="column">
-            <div className="sidebar">
-              <h1>CodeChisme</h1>
-              <h1>Status: {this.loggedInStatus}</h1>
+        <div className="im-container ui three column divided grid">
+          {/* <div className="column"> */}
+            <div className="sidebar ">
+              <ul className="items">
+                  <div className="side-item">
+                    <li>CodeChisme</li>
+                  </div>
+                  <div className="side-item">
+                    <li>{this.loggedInStatus}</li>
+                  </div>
+                  
 
-              <Modal
-                trigger={<Button>NEW CHATROOM</Button>}
-                header="Create a new chatroom!"
-                content={<NewChatroomForm handleNewChat={this.handleNewChat} />}
-                actions={[{ key: "done", content: "HUH", positive: false }]}
-              />
+                  <Modal
+                    className="side-item"
+                    trigger={<Button>NEW CHATROOM</Button>}
+                    header="Create a new chatroom!"
+                    content={<NewChatroomForm handleNewChat={this.handleNewChat} />}
+                    actions={[{ key: "done", content: "HUH", positive: false }]}
+                  />
 
-              <Link to="/">
-                <button onClick={this.handleLogoutClick}>L❤️GOUT </button>
-              </Link>
+                  <Link to="/">
+                    <button className="side-item" onClick={this.handleLogoutClick}>L❤️GOUT </button>
+                  </Link>
+                </ul>
             </div>
-          </div>
+          {/* </div> */}
 
-          <div className="chatroom-list-container">
+          {/* <div className="chatroom-list-container column"> */}
             <ListOfChatrooms
               renderChatroom={this.renderChatroom}
               chats={this.state.chatrooms}
               removeChatroom = {this.removeFromChatrooms}
             />
-          </div>
-          <div className="chatroom-page-container">
+          {/* </div>
+          <div className="chatroom-page-container column"> */}
             <ChatroomPage
               chatroomId={this.state.chatroom_id}
               user={this.props.user}
               currentChatroom={this.state.currentChatroom}
             />
-          </div>
+          {/* </div> */}
         </div>
       </div>
     );

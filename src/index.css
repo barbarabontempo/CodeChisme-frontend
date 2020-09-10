@@ -1,54 +1,71 @@
-.im-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: stretch;
-  padding: 0;
-  border: solid salmon ;
+
+body {
+  padding: 5%;
+  background-color: #F5F5F5;
 }
 
-.sidebar {
-  border: solid rgb(0, 255, 13);
-  display: flex;
-  flex-direction: column;
-  background-color: sandybrown;
-  z-index: 1;
-  height: 100%;
-  padding-top: 16px;
+.im-container {
+  padding:0;
+  background-color: #FFF; 
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  height: 700px;
 }
 
 .chatroom-page-container {
-  display: flex;
-  flex-direction: column;
-  background-color: lightslategray;
+  /* display: flex; */
+  /* flex-direction: column; */
+  background-color: rgb(19, 168, 171);
 }
 
 .chatroom-list {
-  border: solid red;
+  /* border: solid red; */
 }
 
 .chatroom-page {
-  border: solid red;
+  /* border: solid red; */
   width: max-content;
 }
 
 .chatroom {
-  border: solid blue
+  /* border: solid blue */
+
 }
-/* 
+.chat-bubble{
+  /* border:solid 2px lavender; */
+  width: 98.5%;
+  height: 90px;
+  background-color: #FFF;
+  border-bottom: solid 1px #E0E0E0;
+}
+
 .sidebar {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 160px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color:rgb(237, 212, 190);
-  overflow-x: hidden;
-  padding-top: 16px;
-} */
+  float: left;
+  height: 100%;;
+  width: 10%;
+  background: #4090b0;
+  background: -webkit-linear-gradient(#4389a7, #4389a7);
+  background: -o-linear-gradient(#4389a7, #35488e);
+  background: -moz-linear-gradient(#4389a7, #2d3e7e);
+  background: linear-gradient(#4768b5, #263b87);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19);
+}
+
+.sidebar .side-item{
+ 
+  height: 70px;
+  border-bottom: 1px solid #879ad3;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  color: #9fb5ef;
+  font-size: 17pt;
+}
+
+
+
+
+
+
 
 
 h1 {

@@ -13,11 +13,14 @@ export class Chatroom extends Component {
     return (
       <div className="chatroom">
         <h1>CHATROOM: {this.props.currentChatroom.title}</h1>
+       
         {this.props.currentChatroom !== "" ? this.renderingMessages() : null}
+        
         <MessageForm
           user={this.props.user}
           chatroomId={this.props.currentChatroom.id}
           updatesState={this.props.updatesState}
+          className="chat-bubble"
         />
       </div>
     );

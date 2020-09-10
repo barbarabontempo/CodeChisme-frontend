@@ -64,7 +64,7 @@ export class ChatroomPage extends Component {
   render() {
     // console.log("insideRENDER", this.state)
     return (
-      <div className="chatroom-page">
+      <div className="chatroom-page column">
         <h1>CHATROOM PAGE</h1>
 
         <Chatroom
