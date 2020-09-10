@@ -25,8 +25,27 @@ export class MessageForm extends Component {
       body: JSON.stringify(this.state),
     })
       .then((r) => r.json())
+      this.setState(({
+        content: "",
+        user_id: "",
+        chatroom_id: ""
+      }))
       
   };
+
+
+//   onHandleSubmit(e) {
+//     e.preventDefault();
+//     const city = this.state.city;
+//     this.props.onSearchTermChange(city);
+//     this.setState({
+//       city: ''
+//     });
+// }
+
+
+
+
 
   render() {
     return (
@@ -36,7 +55,7 @@ export class MessageForm extends Component {
           <br />
           <input
             type="text"
-            value={this.state.message}
+            value={this.state.content}
             onChange={this.handleChange}
           />
           <input type="submit" value="send" />
