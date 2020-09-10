@@ -11,15 +11,21 @@ export class Chatroom extends Component {
 
   render() {
     return (
-      <div className="chatroom  column">
-        <h1>CHATROOM: {this.props.currentChatroom.title}</h1>
+      <div className="chatroom">
+        <h3>Current room: {this.props.currentChatroom.title}</h3>
+        <div className="chats-messages"> 
         {this.props.currentChatroom !== "" ? this.renderingMessages() : null}
+        </div>
+        
+        <div className="message-form">
+        
         <MessageForm
         className="chat-footer"
-          user={this.props.user}
-          chatroomId={this.props.currentChatroom.id}
-          updatesState={this.props.updatesState}
+        user={this.props.user}
+        chatroomId={this.props.currentChatroom.id}
+        updatesState={this.props.updatesState}
         />
+        </div>
       </div>
     );
   }

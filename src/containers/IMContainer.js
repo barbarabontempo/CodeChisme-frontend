@@ -7,8 +7,6 @@ import { Button, Modal } from "semantic-ui-react";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import consumer from '../cable'
 
-// console.log("from the imCont.", consumer)
-
 consumer.subscriptions.create({
   channel: "UsersChatroomsChannel",
   // chatroom_id: 18,
@@ -65,8 +63,6 @@ export default class Imcontainer extends React.Component {
   };
 
   removeFromChatrooms = (id) => {
-    console.log("youve made it back to imCOntainer", 
-    id)
     this.setState(prevState => ({
       chatrooms: prevState.chatrooms.filter((room) => room.id !== id)
     })
@@ -75,11 +71,11 @@ export default class Imcontainer extends React.Component {
   
 
   render() {
-    console.log("line 74", this.props.user)
     const {name, username, email} = this.props.user
+    console.log("object")
     return (
-      <div>
-        <div className="im-container ui three column grid">
+      <>
+     
           {/* <div className=""> */}
             <div className="sidebar">
             <div className="profile_info">
@@ -88,9 +84,11 @@ export default class Imcontainer extends React.Component {
                 <small><p> {name}</p></small>
             </div>
                 
-                <div><a>CodeChisme</a></div>
+                <div className="sidebar-things"> 
+
+                <a>CodeChisme</a>
               
-                <div><a> online </a></div>
+          <a>Status: {this.props.loggedInStatus}</a>
                
                 <a><Modal
                   trigger={<Button>NEW CHATROOM</Button>}
@@ -105,6 +103,7 @@ export default class Imcontainer extends React.Component {
                 </Link
                 >
               
+                  </div>
             </div>
           {/* </div> */}
 
@@ -115,15 +114,15 @@ export default class Imcontainer extends React.Component {
               removeChatroom = {this.removeFromChatrooms}
             />
           </div>
-          <div className="chatroom-page-container column">
+          <div className="chatroom-page-container">
             <ChatroomPage
               chatroomId={this.state.chatroom_id}
               user={this.props.user}
               currentChatroom={this.state.currentChatroom}
             />
           </div>
-        </div>
-      </div>
+       
+      </>
     );
   }
 }

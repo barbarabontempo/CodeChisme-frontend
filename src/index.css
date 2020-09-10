@@ -6,12 +6,21 @@ body {
   align-items: center;
 }
 
-.im-container {
+
+.app-container {
   padding:0em;
   background-color: #FFF; 
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   height: 700px;
- 
+  width: 1000px;
+  display:flex;
+  flex-direction: row;
+}
+
+.im-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
 .sidebar {
@@ -33,6 +42,10 @@ body {
   margin-top: 8em;
 }
 
+.sidebar-things{
+  margin: auto;
+  padding: 10%;
+}
 .sidebar .profile_info .profile_image{
   width: 100px;
   height: 100px;
@@ -110,17 +123,36 @@ body {
   display: inline-block;
 }
 
+.chatroom-page-container{
+  width: 55%;
+  height: 700px;
+  box-shadow: 0px 8px 10px rgba(0,0,0,0.20);
+  overflow: hidden !important;
+  background-color: #dbe2f3;
+  display: inline-block;
+}
 .chatroom-page {
-  border: solid red;
-  /* width: max-content; */
+  /* border: solid red; */
+  height: 700px;
+  width: 100%;
+  box-shadow: 0px 8px 10px rgba(0,0,0,0.20);
+  overflow: hidden !important;
+  background-color: #dbe2f3;
+  display: inline-block;
+
 }
 
 .chatroom {
-  border: solid blue;
+  height: 500px;
+ 
+}
+
+.chats-messages {
+  /* border: solid blue; */
   flex: 1;
   background: #aaa;
-  height: 700px;
-  /* overflow-y: scroll; */
+  height: 450px;
+  overflow-y: scroll;
   overflow: scroll;
 }
 

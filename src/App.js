@@ -20,7 +20,7 @@ export default class App extends React.Component {
           this.state.loggedInStatus === "NOT_LOGGED_IN"
         ) {
           this.setState({
-            loggedInStatus: "LOGGED_IN",
+            loggedInStatus: "Online",
             user: response.data.user,
           });
         } else if (
@@ -44,7 +44,7 @@ export default class App extends React.Component {
 
   handleLogin = (data) => {
     this.setState({
-      loggedInStatus: "LOGGED_IN",
+      loggedInStatus: "online",
       user: data.user,
     });
   };
@@ -59,7 +59,7 @@ export default class App extends React.Component {
   render() {
     console.log(this.state);
     return (
-      <div className="app">
+      <div className="app-container">
         <BrowserRouter>
           <Switch>
             <Route
