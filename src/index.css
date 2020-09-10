@@ -117,10 +117,22 @@ body {
 
 .chatroom {
   border: solid blue;
-  /* width: 50px;
-  max-width:50px;
-  display: inline-block; */
+  flex: 1;
+  background: #aaa;
+  height: 700px;
+  /* overflow-y: scroll; */
+  overflow: scroll;
 }
+
+.message-ul{
+  list-style-type: none;
+}
+
+.message-li{
+  border: solid blueviolet;
+}
+
+
 
 
 /* 

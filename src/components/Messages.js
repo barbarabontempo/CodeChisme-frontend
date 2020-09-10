@@ -3,8 +3,13 @@ import React from "react";
 export default function Messages(props) {
   return (
     <>
-      <h1>{props.msg.content}</h1>
-      <span>{props.msg.username}</span>
+      <ul className="message-ul">
+        <li className="message-li">
+          {props.msg.content} 
+        </li>
+
+        <span>{props.msg.username} sent at: {props.msg.date}</span>
+      </ul>
     </>
   );
 }
