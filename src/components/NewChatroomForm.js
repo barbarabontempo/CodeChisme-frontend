@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import axios from "axios";
-import ListOfChatrooms from "../containers/ListOfChatrooms";
+
 
 export default class NewChatroomForm extends Component {
   state = {
     title: "",
-    amtPeople: "",
+    amtPeople: ""
   };
 
   handleChange = (e) => {
