@@ -75,7 +75,7 @@ export default class Imcontainer extends React.Component {
     console.log("object")
     return (
       <>
-     
+     <div className="im-container">
           {/* <div className=""> */}
             <div className="sidebar">
             <div className="profile_info">
@@ -127,7 +127,7 @@ export default class Imcontainer extends React.Component {
               currentChatroom={this.state.currentChatroom}
             />
           </div>
-       
+          </div>
       </>
     );
   }

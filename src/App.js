@@ -59,7 +59,7 @@ export default class App extends React.Component {
   render() {
     console.log(this.state);
     return (
-      <div className="app-container">
+      <>
         <BrowserRouter>
           <Switch>
             <Route
@@ -87,7 +87,7 @@ export default class App extends React.Component {
             />
           </Switch>
         </BrowserRouter>
-      </div>
+      </>
     );
   }
 }

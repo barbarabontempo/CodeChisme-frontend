@@ -12,7 +12,7 @@ export class ChatroomPage extends Component {
 
   updatesState = (newMsg) => {
     this.setState((prevState) => ({
-      messagesInChat: [...prevState.messagesInChat, newMsg],
+      messagesInChat: [newMsg, ...prevState.messagesInChat],
     }));
   };
 
