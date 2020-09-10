@@ -17,13 +17,65 @@ body {
 .sidebar {
   float: left;
   height: 700px;;
-  width: 70%;
-  background: #5a79c0;
-  background: -webkit-linear-gradient(#4768b5, #35488e);
-  background: -o-linear-gradient(#6588db, #35488e);
-  background: -moz-linear-gradient(#5d83db, #35488e);
-  background: linear-gradient(#3b589b, #1f306d);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19);
+  width: 30%;
+  background: #5aa3c0;
+  background: #66bfbf;
+  /* background: -webkit-linear-gradient(to left, #66bfbf, #056674); */
+  background: linear-gradient(to right,  #5dbdbd,#5fbbbb,  #49a8a8,#0c5c68);
+  /* box-shadow: 0 10px 20px rgba(0,0,0,0.19); */
+}
+
+.profile_info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8em;
+}
+
+.sidebar .profile_info .profile_image{
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.sidebar .profile_info h4{
+  color: rgb(252, 252, 252);
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.sidebar .profile_info p{
+  color: rgb(252, 252, 252);
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.sidebar a{
+	text-decoration:none;
+  color: #fff;
+  display: block;
+  width: 100%;
+  line-height: 60px;
+	font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  transition: 0.5s;
+  transition-property: left;
+}
+.sidebar ul{
+	list-style-type:none;
+	line-height: 50px;
+}
+
+.sidebar a:hover {
+  background: linear-gradient(to right,  #68d4d4,#69d3d3,  #50bdbd,#128496);
+  border-radius: 5px;
+
+}
+.ui.grid>* {
+  padding-left: 1rem;
+  padding-right: 0rem !important;
 }
 
 .chatroom-page-container {
@@ -54,7 +106,7 @@ body {
   height: 700px;
   box-shadow: 0px 8px 10px rgba(0,0,0,0.20);
   overflow: hidden !important;
-  background-color: #87a3ec;
+  background-color: #dbe2f3;
   display: inline-block;
 }
 
@@ -64,8 +116,13 @@ body {
 }
 
 .chatroom {
-  border: solid blue
+  border: solid blue;
+  /* width: 50px;
+  max-width:50px;
+  display: inline-block; */
 }
+
+
 /* 
 .sidebar {
   display: flex;

@@ -75,27 +75,38 @@ export default class Imcontainer extends React.Component {
   
 
   render() {
-    console.log("line 74", this.props)
+    console.log("line 74", this.props.user)
+    const {name, username, email} = this.props.user
     return (
       <div>
         <div className="im-container ui three column grid">
-          <div className="">
+          {/* <div className=""> */}
             <div className="sidebar">
-              <h1>CodeChisme</h1>
-              <h1>Status: {this.loggedInStatus}</h1>
-
-              <Modal
-                trigger={<Button>NEW CHATROOM</Button>}
-                header="Create a new chatroom!"
-                content={<NewChatroomForm handleNewChat={this.handleNewChat} />}
-                actions={[{ key: "done", content: "HUH", positive: false }]}
-              />
-
-              <Link to="/">
-                <button onClick={this.handleLogoutClick}>L❤️GOUT </button>
-              </Link>
+            <div className="profile_info">
+              <img src="https://images.unsplash.com/photo-1534278931827-8a259344abe7?ixlib=rb-1.2.1&w=1000&q=80" class="profile_image" alt="child"/>
+              <h4> welcome {username}</h4>
+                <small><p> {name}</p></small>
             </div>
-          </div>
+                
+                <div><a>CodeChisme</a></div>
+              
+                <div><a> online </a></div>
+               
+                <a><Modal
+                  trigger={<Button>NEW CHATROOM</Button>}
+                  header="Create a new chatroom!"
+                  content={<NewChatroomForm handleNewChat={this.handleNewChat} />}
+                  actions={['Snooze', { key: 'done', content: 'Done', positive: true }]}
+                  // actions={[{ key: "done", content: "HUH", positive: false }]}
+                  /></a>
+                <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
+                <Link to="/">
+                  <button onClick={this.handleLogoutClick}>L❤️GOUT </button>
+                </Link
+                >
+              
+            </div>
+          {/* </div> */}
 
           <div className="chatroom-list-container">
             <ListOfChatrooms
