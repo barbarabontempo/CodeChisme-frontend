@@ -3,6 +3,7 @@ import Chatroom from "../components/Chatroom";
 import consumer from "../cable";
 
 export class ChatroomPage extends Component {
+
   state = {
     messagesInChat: [],
     username: "",
@@ -31,9 +32,9 @@ export class ChatroomPage extends Component {
         chatroomName: this.state.chatroom
       },
       {
-        connected: () => console.log("connected"),
+        connected: () => console.log("CP connected"),
         received: (data) => this.updatesState(data),
-        disconnected: () => console.log("disconnected"),
+        disconnected: () => console.log("CP disconnected")
       }
     );
   }
@@ -61,7 +62,7 @@ export class ChatroomPage extends Component {
   }
 
   render() {
-    console.log("insideRENDER", this.state)
+    // console.log("insideRENDER", this.state)
     return (
       <div className="chatroom-page">
         <h1>CHATROOM PAGE</h1>

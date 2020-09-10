@@ -5,6 +5,20 @@ import ChatroomPage from "./ChatroomPage";
 import NewChatroomForm from "../components/NewChatroomForm";
 import { Button, Modal } from "semantic-ui-react";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import consumer from '../cable'
+
+// console.log("from the imCont.", consumer)
+
+consumer.subscriptions.create({
+  channel: "UsersChatroomsChannel",
+  // chatroom_id: 18,
+  user_id: 7
+},{
+  connected: () => console.log("IMCON connected"),
+  received: (data) => console.log("recieved line 18", data),
+  disconnected: () => console.log("IM CON disconnected")
+}
+)
 
 export default class Imcontainer extends React.Component {
   state = {
@@ -61,6 +75,7 @@ export default class Imcontainer extends React.Component {
   
 
   render() {
+    console.log("line 74", this.props)
     return (
       <div>
         <div className="im-container">
