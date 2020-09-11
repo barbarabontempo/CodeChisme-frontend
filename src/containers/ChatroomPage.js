@@ -75,7 +75,7 @@ console.log("UNSUBSCRIBING", this.state.username)
     console.log("UNSUBSCRIBING", this.subscription)
     return (
       <div className="chatroom-page">
-        <h1>CHATROOM PAGE</h1>
+        
 
         <Chatroom
           user={this.props.user}

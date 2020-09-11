@@ -12,7 +12,7 @@ export class Chatroom extends Component {
   render() {
     return (
       <div className="chatroom">
-        <h3>Current room: {this.props.currentChatroom.title}</h3>
+        <h2>Current room: {this.props.currentChatroom.title}</h2>
         <div className="chats-messages"> 
         {this.props.currentChatroom !== "" ? this.renderingMessages() : null}
         </div>

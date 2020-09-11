@@ -84,7 +84,7 @@ export default class Imcontainer extends React.Component {
             </div>
             <div className="profile_info">
               <img src={image} class="profile_image" alt="child"/>
-              <h4> welcome {username}</h4>
+              <h4> Welcome, {username}</h4>
                 <small><p> {name}</p></small>
             </div>
 
@@ -92,13 +92,13 @@ export default class Imcontainer extends React.Component {
                 
                <NewChatroomForm handleNewChat={this.handleNewChat}/>
                <div className="sidebar-things"> 
-                <a> Status: {this.props.loggedInStatus} <span class="fa fa-circle-o online"></span> </a>
+                <a> {this.props.loggedInStatus} <span class="fa fa-circle-o online"></span> </a>
                
             
                 <a href="#"><i class="fas fa-sliders-h"></i><span className="setting-span">Settings</span></a>
               
                 <Link to="/">
-                <span className="logout-span" onClick={this.handleLogoutClick}> L❤️GOUT</span> 
+                <span className="logout-span" onClick={this.handleLogoutClick}> Logout</span> 
                 </Link>
               
                   </div>

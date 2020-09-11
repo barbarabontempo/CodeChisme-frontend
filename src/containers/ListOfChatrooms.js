@@ -15,7 +15,7 @@ export default function ListOfChatrooms(props) {
 
   return (
     <>
-      <h1>CHATROOMS AVAILABLE</h1>
+      <h1>Join a chatroom!</h1>
       <form className="search-form">
       <input
           className="search-input"
