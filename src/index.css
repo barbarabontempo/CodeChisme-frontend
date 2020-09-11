@@ -94,12 +94,12 @@ body {
   margin: 0 !important;
   padding: 0 !important;
   position: sticky;
-  top: 8px;
+  top: 0px;
   float: right;
-  width: 100px;
+  width: 200px;
   background: rgb(214, 27, 10)!important;
   top: 15px;
-  right: 100px !important;
+  /* right: 100px !important; */
   text-align: center;
   line-height: 30px;
   letter-spacing: 2px;
@@ -111,8 +111,14 @@ body {
 
 .chatRoom-dv{
   overflow: hidden !important;
-  background-color: #5280eb;
+  background: rgba(8, 127, 140, 0.76);
+ 
   display: inline-block;
+}
+
+.chatroom-header{
+  
+  opacity: 50%;
 }
 
 
