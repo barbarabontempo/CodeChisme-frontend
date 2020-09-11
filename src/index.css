@@ -80,47 +80,52 @@ body {
 .chatRoom-dv .avatar-image {
   position:relative; 
   left:-90px; 
-  top:2px;
+  top: 15 px;
   width: 10%;
   height: 10%;
   border-radius: 100%;
   margin-bottom: 10px;
   margin-top: 10px;
+  background:#f0f0f0;
 }
 
 .corner-ribbon{
-  width: 200px;
-  background: #e43;
-  position: absolute;
-  top: 25px;
-  left: -50px;
+ 
+  margin: 0 !important;
+  padding: 0 !important;
+  position: sticky;
+  top: 8px;
+  float: right;
+  width: 100px;
+  background: rgb(214, 27, 10)!important;
+  top: 15px;
+  right: 100px !important;
   text-align: center;
-  line-height: 50px;
-  letter-spacing: 1px;
+  line-height: 30px;
+  letter-spacing: 2px;
   color: #f0f0f0;
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  background: #e43;
-}
-
-
-.corner-ribbon.sticky{
-  position: fixed;
-}
-
-.chatRoom-dv .right-corner-label:after{
-  top: 25px;
-  right: -50px;
-  left: auto;
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
 }
+
+
+.chatRoom-dv{
+  overflow: hidden !important;
+  background-color: #5280eb;
+  display: inline-block;
+}
+
 
 
 
 
 
 /* />>>>>>>>>>>>>>>> */
+
+
+/* side bar start */
+
+
 .sidebar .profile_info h4{
   color: rgb(252, 252, 252);
   margin-top: 0;
@@ -160,11 +165,16 @@ body {
   border-radius: 5px;
 
 }
-.ui.grid>* {
-  padding-left: 1rem;
-  padding-right: 0rem !important;
-}
 
+
+
+
+/* sidebar end */
+.chatroom-page-container {
+  width: calc(65% - 85px);
+  padding: 0 !important;
+
+}
 
 
 .chat-footer{
