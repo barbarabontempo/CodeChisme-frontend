@@ -88,7 +88,7 @@ export default class Imcontainer extends React.Component {
                 <div className="sidebar-things"> 
                 
               
-                <a> Status: {this.props.loggedInStatus}</a>
+                <a> <i class="fa fa-circle-o online"></i> {this.props.loggedInStatus}</a>
                
                <NewChatroomForm handleNewChat={this.handleNewChat}/>
             
