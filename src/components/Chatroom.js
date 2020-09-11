@@ -5,11 +5,14 @@ import MessageForm from "./MessageForm";
 export class Chatroom extends Component {
   renderingMessages = () => {
     return this.props.messagesInChat.map((message) => (
-      <Messages key={message.id} msg={message} />
+      <Messages key={message.id} msg={message} user={this.props.user} />
     ));
   };
 
   render() {
+
+    console.log("line 13 in chatroom", this.props.messagesInChat)
+
     return (
       <div className="chatroom">
         <h3>Current room: {this.props.currentChatroom.title}</h3>

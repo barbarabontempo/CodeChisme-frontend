@@ -180,6 +180,23 @@ body {
 
 
 /* sidebar end */
+
+
+
+/* start of the messaging room */
+@keyframes fly-in {
+  0% {
+    transform: scale(0.85) translateY(10%);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
 .chatroom-page-container {
   width: calc(65% - 85px);
   padding: 0 !important;
@@ -252,23 +269,98 @@ body {
   flex-direction: column-reverse;
   box-shadow: 4px 8px 3px rgba(0,0,0,0.20);
   border-radius: 2%;
+
+  
 }
 
-.message-ul{
+.chatMessage-right .chatMsg-avatarFrame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden; 
+  margin-right: 16px;
+
+}
+
+.chatMessage-left .chatMsg-avatarFrame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden; 
+  margin-right: 16px;
+
+}
+
+.chatMessage-right{
   list-style-type: none;
   transform: rotate(180deg);
+  float: right;
+  display: flex;
+  align-items: center;
+  transition: all 0.5s;
+  flex-direction: row-reverse;
+}
+
+.chatMessage-left{
+  list-style-type: none;
+  transform: rotate(180deg);
+  float: left;
+  display: flex;
+  align-items: center;
+  transition: all 0.5s;
 }
 
 
 
-.message-li{
-  border: solid blueviolet;
+.msgCon-right{
+  /* border: solid blueviolet; */
   transform: rotate(-180deg);
+  
+  display: block;
+  max-width: 65%;
+  background: linear-gradient(#b8dff4,#8ecbe8);
+  border-radius: 14px;
+  box-sizing: border-box;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #e4e3e3;
+  animation-duration: .2s;
+  animation-name: fly-in;
 }
+
+.msgCon-left{
+  /* border: solid blueviolet; */
+  transform: rotate(-180deg);
+  
+  display: block;
+  max-width: 65%;
+  background: linear-gradient(#58c2fb,#3f90b5);
+  
+  border-radius: 14px;
+  box-sizing: border-box;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #e4e3e3;
+  animation-duration: .2s;
+  animation-name: fly-in;
+}
+
 
 .detail-li {
-  transform: rotate(-180deg);
+  transform: rotate(-180deg);display: flex;
+  align-items: center;
+  transition: all 0.5s;
 }
+
+.chatMsg-avatarFrame
 
 
 
