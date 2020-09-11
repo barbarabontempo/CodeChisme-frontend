@@ -90,7 +90,7 @@ export default class Imcontainer extends React.Component {
                 </Link>
                 <a><i class="fa fa-expand-arrows-alt"></i>CodeChisme</a>
               
-                <a> Status: {this.props.loggedInStatus}</a>
+                <a> <i class="fa fa-circle-o online"></i> {this.props.loggedInStatus}</a>
                
                <NewChatroomForm handleNewChat={this.handleNewChat}/>
                 {/* <a><Modal

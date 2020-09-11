@@ -90,7 +90,7 @@ body {
 }
 
 .corner-ribbon{
- 
+  left:90px; 
   margin: 0 !important;
   padding: 0 !important;
   position: sticky;
@@ -112,7 +112,11 @@ body {
 .chatRoom-dv{
   overflow: hidden !important;
   background: rgba(8, 127, 140, 0.76);
- 
+  border-radius: 25px;
+  /* border: 2px solid #73AD21; */
+  padding: 20px;
+  width: 100px;
+  height: 100px;
   display: inline-block;
 }
 
@@ -143,7 +147,7 @@ body {
   margin-bottom: 20px;
 }
 
-.sidebar a{
+.sidebar a {
   text-decoration:none;
   border: solid 2px #fff;
   color: #fff;
@@ -159,12 +163,14 @@ body {
   
 }
 
-.sidebar ul{
+.sidebar ul {
 	list-style-type:none;
 	line-height: 50px;
 }
 
-
+.online { 
+  color: #07f70f;
+}
 
 .sidebar a:hover {
   background: linear-gradient(to right,  #68d4d4,#69d3d3,  #50bdbd,#128496);
@@ -221,8 +227,6 @@ body {
 .chatroom {
   display:flex;
   flex-direction: column;
- 
- 
 }
 
 .message-form {
@@ -231,8 +235,7 @@ body {
   padding: 5% !important;
 }
 
-.msg-input {
-  
+.msg-input { 
   padding: 5% !important;
 }
 
