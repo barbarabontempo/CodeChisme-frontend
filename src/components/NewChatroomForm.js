@@ -21,23 +21,30 @@ export default class NewChatroomForm extends Component {
       .then((response) => {
         this.props.handleNewChat(response);
       });
+
+      this.setState(({
+       title: "",
+       amtPeople: ""
+      }))
   };
 
   render() {
     console.log(this.props)
     return (
-      <form onSubmit={this.handleSubmit}>
-        <div className="chat-form">
-          <label className="create-chat">create a chatroom!</label>
-          <br />
+      <form className="chat-form" onSubmit={this.handleSubmit}>
+      
+         
           <input
           className="chat-input"
             type="text"
             value={this.state.title}
             onChange={this.handleChange}
+            placeholder="Create New Chatroom!"
           />
-          <input className="chat-btn" type="submit" value="send" />
-      </div>
+          <button className="chat-btn" type="submit" value="send">
+           <i class="far fa-paper-plane fa-2x"></i>
+          </button>
+     
         </form>
     );
   }

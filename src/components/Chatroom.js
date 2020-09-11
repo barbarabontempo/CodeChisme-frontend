@@ -10,9 +10,6 @@ export class Chatroom extends Component {
   };
 
   render() {
-
-    console.log("line 13 in chatroom", this.props.messagesInChat)
-
     return (
       <div className="chatroom">
         <h3>Current room: {this.props.currentChatroom.title}</h3>

@@ -8,6 +8,8 @@ export class Chatrooms extends Component {
   };
 
   handleClickRemove = (e) => {
+
+    console.log("line11 chatroom", this.props)
    let msgId = this.props.chatObj.id
     axios.delete(`http://localhost:3000/chatrooms/${msgId}`)
     .then(res => {
@@ -19,36 +21,21 @@ export class Chatrooms extends Component {
 
   render() {
     const {title, amtPeople} = this.props.chatObj
-    
+    console.log("line 24chatroom",this.props)
     return (
-  
-          
-        
-
-        
          
-          <div className="chatRoom-dv" onClick={this.handleRenderChatroom}>
-            
+          <div className="chatRoom-dv bounce-6" onClick={this.handleRenderChatroom}>
+          
           <div onClick={this.handleClickRemove} className="right-corner-label corner-ribbon sticky red"> 
-              <i class="fa fa-hand-scissors fa-spin"></i>
-                  
+              <i class="fa fa-hand-scissors"></i>      
           </div>
-          <img
-            className="avatar-image"
-            src="https://cdn0.iconfinder.com/data/icons/cute-mono-style-line/44/iconFeedback-512.png"
-            alt="message icon"
-          />
-          {/* <div className="content"> */}
+          
+         
+         
             <div className="chatroom-header">
-                  {title} 
+                  <h1> {title} </h1>
             </div>
         
-                <small>pop: {amtPeople} </small>
-            
-   
-           
-            
-      
       </div>
     );
   }

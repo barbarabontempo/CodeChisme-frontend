@@ -39,16 +39,18 @@ export class MessageForm extends Component {
     return (
       <>
         <form className= "message-form" onSubmit={this.handleSubmit}>
-          <label>New Message:</label>
-          <br />
           <input
           className="msg-input"
             type="text"
             value={this.state.content}
             onChange={this.handleChange}
+            placeholder="Type....."
           />
           <br></br>
-          <input className="msg-btn" type="submit" value="send" />
+          <button className="msg-btn" type="submit" value="send">
+          <i class="far fa-paper-plane fa-2x"></i>
+            </button>
+          
         </form>
       </>
     );

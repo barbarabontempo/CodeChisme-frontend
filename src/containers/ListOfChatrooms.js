@@ -16,6 +16,14 @@ export default function ListOfChatrooms(props) {
   return (
     <>
       <h1>CHATROOMS AVAILABLE</h1>
+      <form className="search-form">
+      <input
+          className="search-input"
+            type="text"
+            value=""
+            placeholder=" Search Chats"
+          />
+      </form>
       {handleIncomingChats()}
     </>
   );
