@@ -220,7 +220,7 @@ body {
   background-color: #dbe2f3;
   display: flex;
   flex-direction: column;
-  padding: 5%;
+  padding: 20px;
 }
 
 .chatroom {
