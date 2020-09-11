@@ -38,7 +38,7 @@ export class MessageForm extends Component {
   render() {
     return (
       <>
-        <form onSubmit={this.handleSubmit}>
+        <form className= "message-form" onSubmit={this.handleSubmit}>
           <label>New Message:</label>
           <br />
           <input

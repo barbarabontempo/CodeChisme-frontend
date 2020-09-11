@@ -20,7 +20,7 @@ export class Chatroom extends Component {
         {this.props.currentChatroom !== "" ? this.renderingMessages() : null}
         </div>
         
-        <div className="message-form">
+        {/* <div className="message-form"> */}
         
         <MessageForm
         className="chat-footer"
@@ -28,7 +28,7 @@ export class Chatroom extends Component {
         chatroomId={this.props.currentChatroom.id}
         updatesState={this.props.updatesState}
         />
-        </div>
+        {/* </div>f */}
       </div>
     );
   }
