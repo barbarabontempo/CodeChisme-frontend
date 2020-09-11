@@ -14,9 +14,9 @@ export default function ListOfChatrooms(props) {
   };
 
   return (
-    <div className="chatroom-list ui grey">
+    <>
       <h1>CHATROOMS AVAILABLE</h1>
       {handleIncomingChats()}
-    </div>
+    </>
   );
 }

@@ -21,13 +21,14 @@ export class Chatrooms extends Component {
     const {title, amtPeople} = this.props.chatObj
     
     return (
-      <div className="">
+  
           
-        <div className="item detail" onClick={this.handleRenderChatroom}>
+        
 
         
          
-          <div className="chatRoom-dv">
+          <div className="chatRoom-dv" onClick={this.handleRenderChatroom}>
+            
           <div onClick={this.handleClickRemove} className="right-corner-label corner-ribbon sticky red"> 
               <i class="fa fa-hand-scissors fa-spin"></i>
                   
@@ -44,11 +45,10 @@ export class Chatrooms extends Component {
         
                 <small>pop: {amtPeople} </small>
             
-            {/* </div> */}
-            </div>
+   
            
             
-          </div>
+      
       </div>
     );
   }

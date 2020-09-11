@@ -45,6 +45,8 @@ body {
 .sidebar a {
   padding:10px;
   margin-bottom: 5px;
+  text-align: center;
+  display: block;
 }
 
 .profile_info{
@@ -52,12 +54,26 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 4em;
+  margin-top: 2em;
   
 }
 
 .chat-form{
-  padding:0px 30px;
+  margin-bottom: 40px;
+  width: 100%;
+  padding: 16px 50px 16px 16px;
+}
+.chat-input{
+background-color: #eee;
+border: none;
+padding: 12px 15px;
+margin: 8px 0;
+}
+
+
+
+.create-chat{
+  color: #f0f0f0;
 }
 
 .sidebar-things{
@@ -90,30 +106,21 @@ body {
 }
 
 .corner-ribbon{
- 
-  margin: 0 !important;
-  padding: 0 !important;
-  position: sticky;
-  top: 0px;
   float: right;
-  width: 200px;
-  background: rgb(214, 27, 10)!important;
-  top: 15px;
-  /* right: 100px !important; */
   text-align: center;
-  line-height: 30px;
-  letter-spacing: 2px;
   color: #f0f0f0;
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
+  
 }
 
 
 .chatRoom-dv{
   overflow: hidden !important;
   background: rgba(8, 127, 140, 0.76);
- 
   display: inline-block;
+  border-radius: 25px;
+  padding: 8px;
 }
 
 .chatroom-header{
@@ -256,21 +263,25 @@ body {
 
 .message-ul{
   list-style-type: none;
-  transform: rotate(180deg);
+  /* transform: rotate(180deg); */
 }
 
 
 
 .message-li{
   border: solid blueviolet;
-  transform: rotate(-180deg);
+  /* transform: rotate(-180deg); */
 }
 
 .detail-li {
-  transform: rotate(-180deg);
+  /* transform: rotate(-180deg); */
 }
 
 
+
+.online { 
+  color: green
+}
 
 /* 
 .sidebar {
@@ -328,7 +339,7 @@ h1 {
   border-color: #ffffff;
 }
 
-.form {
+.form-auth {
   background-color: #ffffff;
   display: flex;
   align-items: center;
@@ -343,7 +354,7 @@ h1 {
   margin-bottom: 30px;
 }
 
-input {
+.input-auth {
   background-color: #eee;
   border: none;
   padding: 12px 15px;
@@ -351,7 +362,8 @@ input {
   width: 85%;
   text-align: center;
   font-size: 13px;
-  border-radius: 15px;
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .social-container {

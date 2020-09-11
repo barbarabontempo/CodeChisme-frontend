@@ -40,10 +40,11 @@ export default class Registration extends Component {
   render() {
     return (
       <div className="form-container sign-up-container">
-        <form className="form" onSubmit={this.handleSubmit}>
+        <form className="form-auth" onSubmit={this.handleSubmit}>
           <h3 className="form-title">Chiśme Up</h3>
 
           <input
+          className="input-auth"
             type="text"
             name="name"
             placeholder="Name"
@@ -53,6 +54,7 @@ export default class Registration extends Component {
           />
 
           <input
+          className="input-auth"
             type="text"
             name="username"
             placeholder="username"
@@ -62,6 +64,7 @@ export default class Registration extends Component {
           />
 
           <input
+          className="input-auth"
             type="email"
             name="email"
             placeholder="email"
@@ -71,27 +74,30 @@ export default class Registration extends Component {
           />
 
           <input
+          className="input-auth"
             type="text"
             name="image"
-            placeholder="imageurl"
+            placeholder="image url"
             value={this.state.image}
             onChange={this.handleChange}
             required
           />
 
           <input
+          className="input-auth"
             type="password"
             name="password"
-            placeholder="Password"
+            placeholder="password"
             value={this.state.password}
             onChange={this.handleChange}
             required
           />
 
           <input
+          className="input-auth"
             type="password"
             name="password_confirmation"
-            placeholder="Password Confirmation"
+            placeholder="password confirmation"
             value={this.state.password_confirmation}
             onChange={this.handleChange}
             required

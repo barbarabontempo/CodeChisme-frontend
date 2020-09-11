@@ -71,7 +71,7 @@ export default class Imcontainer extends React.Component {
   
 
   render() {
-    const {name, username, email} = this.props.user
+    const {name, username, email, image} = this.props.user
     console.log("object")
     return (
       <>
@@ -80,17 +80,17 @@ export default class Imcontainer extends React.Component {
             <div className="sidebar">
             <h1 className="code-head">CodeChisme</h1>
             <div className="profile_info">
-              <img src="https://images.unsplash.com/photo-1534278931827-8a259344abe7?ixlib=rb-1.2.1&w=1000&q=80" class="profile_image" alt="child"/>
+              <img src={image} class="profile_image" alt="child"/>
               <h4> welcome {username}</h4>
                 <small><p> {name}</p></small>
             </div>
                 
                 <div className="sidebar-things"> 
                 
-              
-                <a> Status: {this.props.loggedInStatus}</a>
-               
                <NewChatroomForm handleNewChat={this.handleNewChat}/>
+              
+                <a> Status: {this.props.loggedInStatus} <span class="fa fa-circle-o online"></span> </a>
+               
             
                 <a href="#"><i class="fas fa-sliders-h"></i><span className="setting-span">Settings</span></a>
               
