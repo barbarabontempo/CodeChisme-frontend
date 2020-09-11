@@ -26,7 +26,7 @@ export default class NewChatroomForm extends Component {
   render() {
     console.log(this.props)
     return (
-      <div>
+      <div className="chat-form">
         <form onSubmit={this.handleSubmit}>
           <label>Chatroom name:</label>
           <br />
@@ -41,66 +41,3 @@ export default class NewChatroomForm extends Component {
     );
   }
 }
-
-// import React, { useState } from 'react';
-// import { Modal, Button } from 'react-bootstrap';
-// import axios from 'axios';
-
-// export default function NewChatroomForm({handleNewChat}) {
-
-//   const [show, setShow] = useState(false);
-//   const [title, setTitle] = useState('');
-//   const [amtPeople, setAmtPeople] = useState(1);
-
-//   const handleClose = () => setShow(false);
-//   const handleShow = () => setShow(true);
-
-//   const handleChange = (e) => {
-//     setTitle(e.target.value);
-//   };
-
-//   const handleSubmit = (event) => {
-//     event.preventDefault();
-//     const newChatObj = {title: title, amtPeople: amtPeople};
-
-//     axios
-//       .post("http://localhost:3000/chatrooms", newChatObj)
-//       .then((response) => {
-//         handleNewChat(response);
-//       });
-//   };
-
-//   return (
-//     <>
-//       <Button variant="primary" onClick={handleShow}>
-//         Launch demo modal
-//       </Button>
-
-//       <Modal show={show} onHide={handleClose}>
-//         <Modal.Header closeButton>
-//           <Modal.Title>New Chatroom</Modal.Title>
-//         </Modal.Header>
-//         <Modal.Body>
-//           <form onSubmit={handleSubmit}>
-//             <label>Chatroom name:</label>
-//             <br />
-//             <input
-//               type="text"
-//               value={title}
-//               onChange={handleChange}
-//             />
-//             {/* <Button type="submit" value="send" /> */}
-//           </form>
-//           <Modal.Footer>
-//             <Button variant="secondary" onClick={handleClose}>
-//               Close
-//             </Button>
-//             <Button variant="primary" type="submit">
-//               Create Chatroom
-//             </Button>
-//           </Modal.Footer>
-//         </Modal.Body>
-//       </Modal>
-//     </>
-//   );
-// }

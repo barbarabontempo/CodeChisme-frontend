@@ -120,13 +120,13 @@ export default class Imcontainer extends React.Component {
               removeChatroom = {this.removeFromChatrooms}
             />
           </div>
-          <div className="chatroom-page-container">
+          
             <ChatroomPage
               chatroomId={this.state.chatroom_id}
               user={this.props.user}
               currentChatroom={this.state.currentChatroom}
             />
-          </div>
+       
           </div>
       </>
     );

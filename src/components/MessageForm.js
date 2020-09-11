@@ -35,19 +35,6 @@ export class MessageForm extends Component {
   };
 
 
-//   onHandleSubmit(e) {
-//     e.preventDefault();
-//     const city = this.state.city;
-//     this.props.onSearchTermChange(city);
-//     this.setState({
-//       city: ''
-//     });
-// }
-
-
-
-
-
   render() {
     return (
       <>
