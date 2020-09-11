@@ -78,6 +78,7 @@ export default class Imcontainer extends React.Component {
      <div className="im-container">
           {/* <div className=""> */}
             <div className="sidebar">
+       <h1>CodeChisme</h1>
             <div className="profile_info">
               <img src="https://images.unsplash.com/photo-1534278931827-8a259344abe7?ixlib=rb-1.2.1&w=1000&q=80" class="profile_image" alt="child"/>
               <h4> welcome {username}</h4>
@@ -85,29 +86,17 @@ export default class Imcontainer extends React.Component {
             </div>
                 
                 <div className="sidebar-things"> 
-                <Link to="/">
-                  <a onClick={this.handleLogoutClick}> <span>L❤️GOUT</span> </a>
-                </Link>
-                <a><i class="fa fa-expand-arrows-alt"></i>CodeChisme</a>
+                
               
                 <a> Status: {this.props.loggedInStatus}</a>
                
                <NewChatroomForm handleNewChat={this.handleNewChat}/>
-                {/* <a><Modal
-                  trigger={<Button>NEW CHATROOM</Button>}
-                  header="Create a new chatroom!"
-                  content={<NewChatroomForm
-                    handleNewChat={this.handleNewChat}
-
-                    />}
-                  actions={['Snooze', { key: 'done', content: 'Done', positive: true }]}
-                  // actions={[{ key: "done", content: "HUH", positive: false }]}
-                  />
-                  <i class="fas fa-comment-dots"></i>
-                  </a> */}
-                  {/* <NewChatroomForm /> */}
-                <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
+            
+                <a href="#"><i class="fas fa-sliders-h"></i><span className="setting-span">Settings</span></a>
               
+                <Link to="/">
+                <span className="logout-span" onClick={this.handleLogoutClick}> L❤️GOUT</span> 
+                </Link>
               
                   </div>
             </div>

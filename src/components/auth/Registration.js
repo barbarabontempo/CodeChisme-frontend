@@ -6,6 +6,7 @@ export default class Registration extends Component {
     name: "",
     username: "",
     email: "",
+    image: "",
     password: "",
     password_confirmation: "",
     registrationErrors: "",
@@ -38,62 +39,70 @@ export default class Registration extends Component {
   };
   render() {
     return (
-    
-        <div className="form-container sign-up-container">
+      <div className="form-container sign-up-container">
         <form className="form" onSubmit={this.handleSubmit}>
-            <h3 className="form-title">Chiśme Up</h3>
+          <h3 className="form-title">Chiśme Up</h3>
 
-                      <input
-                        type="text"
-                        name="name"
-                        placeholder="Name"
-                        value={this.state.name}
-                        onChange={this.handleChange}
-                        required
-                        />
-                 
-                          <input
-                          type="text"
-                          name="username"
-                          placeholder="username"
-                          value={this.state.username}
-                          onChange={this.handleChange}
-                          required
-                        />
-      
-              <input
-              type="email"
-              name="email"
-              placeholder="email"
-              value={this.state.email}
-              onChange={this.handleChange}
-              required
-              />
-          
-                  <input
-                  type="password"
-                  name="password"
-                  placeholder="Password"
-                  value={this.state.password}
-                  onChange={this.handleChange}
-                  required
-                  />
-            
-                  <input
-                  type="password"
-                  name="password_confirmation"
-                  placeholder="Password Confirmation"
-                  value={this.state.password_confirmation}
-                  onChange={this.handleChange}
-                  required
-                  />
-        
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            value={this.state.name}
+            onChange={this.handleChange}
+            required
+          />
 
-          <button className="form-button" type="submit"> Register </button>
+          <input
+            type="text"
+            name="username"
+            placeholder="username"
+            value={this.state.username}
+            onChange={this.handleChange}
+            required
+          />
+
+          <input
+            type="email"
+            name="email"
+            placeholder="email"
+            value={this.state.email}
+            onChange={this.handleChange}
+            required
+          />
+
+          <input
+            type="text"
+            name="image"
+            placeholder="imageurl"
+            value={this.state.image}
+            onChange={this.handleChange}
+            required
+          />
+
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            value={this.state.password}
+            onChange={this.handleChange}
+            required
+          />
+
+          <input
+            type="password"
+            name="password_confirmation"
+            placeholder="Password Confirmation"
+            value={this.state.password_confirmation}
+            onChange={this.handleChange}
+            required
+          />
+
+          <button className="form-button" type="submit">
+            {" "}
+            Register{" "}
+          </button>
         </form>
       </div>
     );
   }
 }
-
-

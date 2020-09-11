@@ -172,8 +172,15 @@ body {
 
 }
 
+.logout-span{
+  text-align: center;
+  display: block;
+}
 
-
+setting-span {
+  text-align: center;
+  display: block;
+}
 
 /* sidebar end */
 .chatroom-page-container {
