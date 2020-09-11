@@ -21,36 +21,31 @@ export class Chatrooms extends Component {
     const {title, amtPeople} = this.props.chatObj
     
     return (
-      <div className="ui middle aligned animated list">
+      <div className="">
+          
         <div className="item detail" onClick={this.handleRenderChatroom}>
+
+        
          
-          <button className="chatRoom-dv">
+          <div className="chatRoom-dv">
+          <div onClick={this.handleClickRemove} className="right-corner-label corner-ribbon sticky red"> 
+              <i class="fa fa-hand-scissors fa-spin"></i>
+                  
+          </div>
           <img
             className="avatar-image"
             src="https://cdn0.iconfinder.com/data/icons/cute-mono-style-line/44/iconFeedback-512.png"
             alt="message icon"
           />
           {/* <div className="content"> */}
-            <div className="header">
-              {title} 
-             
-              <span>
-             
+            <div className="chatroom-header">
+                  {title} 
+            </div>
+        
                 <small>pop: {amtPeople} </small>
-              </span>
-
-              
-              <div className="right-corner-label  sticky red"> 
-                <a onClick={this.handleClickRemove}>
-                   
-                        
-                        {/* <i className= "trash alternate outline icon">  </i> */}
-                  </a>
-              </div>
-             
-              </div>
+            
             {/* </div> */}
-            </button>
+            </div>
            
             
           </div>

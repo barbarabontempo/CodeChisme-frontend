@@ -92,7 +92,7 @@ export default class Imcontainer extends React.Component {
               
                 <a> Status: {this.props.loggedInStatus}</a>
                
-               <NewChatroomForm />
+               <NewChatroomForm handleNewChat={this.handleNewChat}/>
                 {/* <a><Modal
                   trigger={<Button>NEW CHATROOM</Button>}
                   header="Create a new chatroom!"
