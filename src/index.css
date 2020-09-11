@@ -58,6 +58,51 @@ body {
   margin-bottom: 10px;
   margin-top: 10px;
 }
+/* ................... chat room ribbon */
+.chatRoom-dv .avatar-image {
+  position:relative; 
+  left:-90px; 
+  top:2px;
+  width: 10%;
+  height: 10%;
+  border-radius: 100%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.corner-ribbon{
+  width: 200px;
+  background: #e43;
+  position: absolute;
+  top: 25px;
+  left: -50px;
+  text-align: center;
+  line-height: 50px;
+  letter-spacing: 1px;
+  color: #f0f0f0;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  background: #e43;
+}
+
+
+.corner-ribbon.sticky{
+  position: fixed;
+}
+
+.chatRoom-dv .right-corner-label:after{
+  top: 25px;
+  right: -50px;
+  left: auto;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+
+
+
+
+/* />>>>>>>>>>>>>>>> */
 .sidebar .profile_info h4{
   color: rgb(252, 252, 252);
   margin-top: 0;
@@ -90,9 +135,7 @@ body {
 	line-height: 50px;
 }
 
-.sidebar span {
-  -moz-text-align-last: center;
-}
+
 
 .sidebar a:hover {
   background: linear-gradient(to right,  #68d4d4,#69d3d3,  #50bdbd,#128496);

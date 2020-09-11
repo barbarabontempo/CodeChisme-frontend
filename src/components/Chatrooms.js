@@ -24,13 +24,13 @@ export class Chatrooms extends Component {
       <div className="ui middle aligned animated list">
         <div className="item detail" onClick={this.handleRenderChatroom}>
          
-          <button className="ui floating message">
+          <button className="chatRoom-dv">
           <img
-            className="ui avatar image"
+            className="avatar-image"
             src="https://cdn0.iconfinder.com/data/icons/cute-mono-style-line/44/iconFeedback-512.png"
             alt="message icon"
           />
-          <div className="content">
+          {/* <div className="content"> */}
             <div className="header">
               {title} 
              
@@ -40,16 +40,16 @@ export class Chatrooms extends Component {
               </span>
 
               
-
+              <div className="right-corner-label  sticky red"> 
+                <a onClick={this.handleClickRemove}>
+                   
+                        
+                        {/* <i className= "trash alternate outline icon">  </i> */}
+                  </a>
               </div>
-              <a onClick={this.handleClickRemove}>
-                  <div className="ui right corner label red">
-                      
-                      <i className= "trash alternate outline icon">  </i>
-                  </div>
-                </a>
              
-            </div>
+              </div>
+            {/* </div> */}
             </button>
            
             
