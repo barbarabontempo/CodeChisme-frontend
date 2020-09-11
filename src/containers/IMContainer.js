@@ -78,7 +78,7 @@ export default class Imcontainer extends React.Component {
      <div className="im-container">
           {/* <div className=""> */}
             <div className="sidebar">
-       <h1>CodeChisme</h1>
+            <h1 className="code-head">CodeChisme</h1>
             <div className="profile_info">
               <img src="https://images.unsplash.com/photo-1534278931827-8a259344abe7?ixlib=rb-1.2.1&w=1000&q=80" class="profile_image" alt="child"/>
               <h4> welcome {username}</h4>
@@ -88,7 +88,7 @@ export default class Imcontainer extends React.Component {
                 <div className="sidebar-things"> 
                 
               
-                <a> <i class="fa fa-circle-o online"></i> {this.props.loggedInStatus}</a>
+                <a> Status: {this.props.loggedInStatus}</a>
                
                <NewChatroomForm handleNewChat={this.handleNewChat}/>
             
