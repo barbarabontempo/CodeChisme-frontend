@@ -10,7 +10,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## How To Use
  To clone and run this application, youll need Git and Node.js (which comes with npm) installed on your computer. From your commandline:
  
-## Badges
+## Visuals
+![Login page](./loginChisme.png)
+![Home page](./panelChisme.png)
+
 
 ### `yarn start`
 

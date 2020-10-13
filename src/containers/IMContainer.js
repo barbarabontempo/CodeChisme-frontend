@@ -37,7 +37,8 @@ export default class Imcontainer extends React.Component {
   };
 
   handleAllChats = () => {
-    axios.get("http://localhost:3000/chatrooms").then((resp) => {
+    axios.get("http://localhost:3000/chatrooms")
+    .then((resp) => {
       this.setState({
         chatrooms: resp.data,
       });
