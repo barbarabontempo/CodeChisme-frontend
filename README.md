@@ -3,11 +3,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 # Code Chisme 
  A social platform that facilitates communication among developers and the programming community alike.
  
-# Description
+## Description
 
- The term "Chisme" roughly translates to "tea", or gossip, which can often be the fastest way to inform. With this in mind we devloped Code Chisme Using Websockets through Actioncable the app allows the user to create chatrooms pertaining to topics of programming. In addition to allowing realtime communication. User authentication is implemented through use of sessions and Bcrypt.
+ The term *Chisme* roughly translates to *tea*, or *gossip*, which can often be the fastest way to inform. With this in mind we devloped Code Chisme Using Websockets through Actioncable the app allows the user to create chatrooms pertaining to topics of programming. In addition to allowing realtime communication. User authentication is implemented through use of sessions and Bcrypt.
  
-# Badges
+## How To Use
+ To clone and run this application, youll need Git and Node.js (which comes with npm) installed on your computer. From your commandline:
+ 
+## Badges
 
 ### `yarn start`
 
@@ -18,7 +21,7 @@ The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
 
-# Contributing
+## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
