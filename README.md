@@ -1,8 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Code Chisme 
 
-In the project directory, you can run:
+Code Chisme is a social platform that facilitates communication among developers and the programming community alike.
 
 ### `yarn start`
 
