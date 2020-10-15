@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 
+
 export default class Registration extends Component {
   state = {
     name: "",
@@ -14,10 +15,17 @@ export default class Registration extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
+    const form = new FormData()
+    form.append("image", this.state.image)
+    form.append("name", this.state.name)
+    form.append("username", this.state.username)
+    form.append("email", this.state.email)
+    form.append("password", this.state.password)
+    form.append("password_confirmation", this.state.password_confirmation)
     axios
       .post(
         "http://localhost:3000/registrations",
-        { user: this.state },
+         form,
         {
           withCredentials: true,
         }
@@ -75,7 +83,7 @@ export default class Registration extends Component {
 
           <input
           className="input-auth"
-            type="text"
+            type="file"
             name="image"
             placeholder="image url"
             value={this.state.image}
