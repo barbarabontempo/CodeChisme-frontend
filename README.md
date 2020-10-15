@@ -36,22 +36,24 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Make a pull request in a diffrent branch and do not fork :D 
 
 ## Visuals
- ![Login page](./loginChisme.png)
- ![Home page](./panelChisme.png)
+<details>
+  <summary> Login Page </summary> 
+    <img src="./loginChisme.png" alt="login Page"/>
+</details>
+<details>
+  <summary> User Home Page </summary> 
+    <img src="./panelChisme.png" alt="User Home Page"/>
+</details>
 
 
-### `yarn start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-Please make sure to update tests as appropriate.
+Please make sure to update tests as appropriate.\
+
+[Go To Top](#Description)
+<a name="Description"></a>
 
 
