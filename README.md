@@ -1,5 +1,5 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-![](https://www.freelogodesign.org/file/app/client/thumb/2ccd8627-de7e-4481-80ac-a7b2ec5e9f00_1000x600-watermark.png?20201013)
+![](./CodeChisme.png)
 
 # Code Chisme 
  A social platform that facilitates communication among developers and the programming community alike.
