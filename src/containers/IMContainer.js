@@ -93,7 +93,7 @@ export default class Imcontainer extends React.Component {
                 
                <NewChatroomForm handleNewChat={this.handleNewChat}/>
                <div className="sidebar-things"> 
-                <a> {this.props.loggedInStatus} <span className="fa fa-circle-o online"></span> </a>
+                <a > {this.props.loggedInStatus} <span className="fa fa-circle-o online"></span> </a>
                
             
                 <a href="#"><i className="fas fa-sliders-h"></i><span className="setting-span">Settings</span></a>
