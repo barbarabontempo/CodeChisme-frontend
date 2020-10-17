@@ -7,11 +7,11 @@ export default function Messages(props) {
     <>
 
 {/* the div containing the chat has to change */}
-        <div className ={ props.user.id === props.msg.user_id ? "chatMessage-left": "chatMessage-right"}>
+        <div className ={ props.user.id === props.msg.user_id ? "chatMessage-right": "chatMessage-left"}>
           <span className="chatMsg-avatarFrame">
-            <img src={props.msg.user.image} alt="user" />
+            <img className="da-img" src={props.msg.user.image} alt="user"  />
           </span>
-          <p className= { props.user.id === props.msg.user_id ? "msgCon-left": "msgCon-right"}>
+          <p className= { props.user.id === props.msg.user_id ? "msgCon-right": "msgCon-left"}>
             {props.msg.content}
           </p>
           <li className={"detail-li"}>{props.msg.username} sent at: {props.msg.date}</li>

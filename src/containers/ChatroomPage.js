@@ -18,7 +18,7 @@ export class ChatroomPage extends Component {
 
   chatsMsg = (data) => {
     this.setState({
-      messagesInChat: [...data.messages],
+      messagesInChat: [...data.messages].reverse(),
       username: this.props.user.username,
       chatroom: data.title,
     });
