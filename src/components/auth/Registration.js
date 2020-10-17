@@ -7,7 +7,7 @@ export default class Registration extends Component {
     name: "",
     username: "",
     email: "",
-    image: "",
+    image: {},
     password: "",
     password_confirmation: "",
     registrationErrors: "",
@@ -22,6 +22,7 @@ export default class Registration extends Component {
     form.append("email", this.state.email)
     form.append("password", this.state.password)
     form.append("password_confirmation", this.state.password_confirmation)
+    console.log(form)
     axios
       .post(
         "http://localhost:3000/registrations",
@@ -41,11 +42,17 @@ export default class Registration extends Component {
   };
 
   handleChange = (event) => {
+    event.persist()
+    let val = (event.target.type !== "file") ? (event.target.value ) : (event.target.files[0])
+    // debugger
     this.setState({
-      [event.target.name]: event.target.value,
+      [event.target.name]: val
     });
+
   };
+
   render() {
+    console.log("this isthe imagè", this.state.image)
     return (
       <div className="form-container sign-up-container">
         <form className="form-auth" onSubmit={this.handleSubmit}>
@@ -86,7 +93,7 @@ export default class Registration extends Component {
             type="file"
             name="image"
             placeholder="image url"
-            value={this.state.image}
+            // value={this.state.image.name ? this.state.image : null}
             onChange={this.handleChange}
             required
           />
