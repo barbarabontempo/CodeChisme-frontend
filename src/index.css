@@ -154,8 +154,8 @@ body {
   text-align: center;
   color: #f0f0f0;
   line-height: 50px;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
+  /* transform: rotate(45deg);
+  -webkit-transform: rotate(45deg); */
   
 }
 
@@ -385,7 +385,7 @@ body {
 .chatMessage-right{
   list-style-type: none;
   /* transform: rotate(180deg); */
-  transform: rotate(180deg);
+  /* transform: rotate(180deg); */
   float: right;
   display: flex;
   align-items: center;
@@ -395,7 +395,7 @@ body {
 
 .chatMessage-left{
   list-style-type: none;
-  transform: rotate(180deg);
+  /* transform: rotate(180deg); */
   float: left;
   display: flex;
   align-items: center;
@@ -413,7 +413,7 @@ body {
   /* transform: rotate(-180deg); */
 .msgCon-right{
   /* border: solid blueviolet; */
-  transform: rotate(-180deg);
+  /* transform: rotate(-180deg); */
   
   display: block;
   max-width: 65%;
@@ -431,7 +431,7 @@ body {
 
 .msgCon-left{
   /* border: solid blueviolet; */
-  transform: rotate(-180deg);
+  /* transform: rotate(-180deg); */
   
   display: block;
   max-width: 65%;
@@ -449,7 +449,7 @@ body {
 
 
 .detail-li {
-  transform: rotate(-180deg);display: flex;
+  /* transform: rotate(-180deg);display: flex; */
   align-items: center;
   transition: all 0.5s;
 }
