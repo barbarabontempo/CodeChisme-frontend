@@ -48,7 +48,7 @@ export class MessageForm extends Component {
           />
           <br></br>
           <button className="msg-btn" type="submit" value="send">
-          <i class="far fa-paper-plane fa-2x"></i>
+          <i className="far fa-paper-plane fa-2x"></i>
             </button>
           
         </form>

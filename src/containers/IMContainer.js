@@ -4,7 +4,7 @@ import ListOfChatrooms from "./ListOfChatrooms";
 import ChatroomPage from "./ChatroomPage";
 import NewChatroomForm from "../components/NewChatroomForm";
 // import { Button, Modal } from "semantic-ui-react";
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import consumer from '../cable'
 
 consumer.subscriptions.create({
@@ -72,7 +72,7 @@ export default class Imcontainer extends React.Component {
   
 
   render() {
-    const {name, username, email, image} = this.props.user
+    const {name, username, image} = this.props.user
     console.log("object")
     return (
       <>
@@ -84,7 +84,7 @@ export default class Imcontainer extends React.Component {
               <h1>CodeChisme</h1>
             </div>
             <div className="profile_info">
-              <img src={image} class="profile_image" alt="child"/>
+              <img src={image} className="profile_image" alt="child"/>
               <h4> Welcome, {username}</h4>
                 <small><p> {name}</p></small>
             </div>
@@ -93,10 +93,10 @@ export default class Imcontainer extends React.Component {
                 
                <NewChatroomForm handleNewChat={this.handleNewChat}/>
                <div className="sidebar-things"> 
-                <a> {this.props.loggedInStatus} <span class="fa fa-circle-o online"></span> </a>
+                <a> {this.props.loggedInStatus} <span className="fa fa-circle-o online"></span> </a>
                
             
-                <a href="#"><i class="fas fa-sliders-h"></i><span className="setting-span">Settings</span></a>
+                <a href="#"><i className="fas fa-sliders-h"></i><span className="setting-span">Settings</span></a>
               
                 <Link to="/">
                 <span className="logout-span" onClick={this.handleLogoutClick}> Logout</span> 

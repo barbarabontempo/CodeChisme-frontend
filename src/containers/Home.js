@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Registration from "../components/auth/Registration";
 import Login from "../components/auth/Login";
-import axios from "axios";
+// import axios from "axios";
 import Overlay from "../components/auth/Overlay";
 
 export default class Home extends Component {

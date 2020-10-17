@@ -10,7 +10,10 @@ class Overlay extends Component {
                     <div className="overlay-panel overlay-left">
                         <h1>Welcome Back!</h1>
                         <p className="overlay-description">
-                            Happy to see you 💩
+                            Happy to see you 
+                            <span role="img" aria-label="poop">
+                            💩
+                            </span>
                         </p>
                         <button
                             className="ghost form-button"

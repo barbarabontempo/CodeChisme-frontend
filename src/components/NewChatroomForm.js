@@ -42,7 +42,7 @@ export default class NewChatroomForm extends Component {
             placeholder="Create New Chatroom!"
           />
           <button className="chat-btn" type="submit" value="send">
-           <i class="far fa-paper-plane fa-2x"></i>
+           <i className="far fa-paper-plane fa-2x"></i>
           </button>
      
         </form>

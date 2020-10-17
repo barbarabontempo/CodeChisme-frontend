@@ -10,7 +10,7 @@ export default function Messages(props) {
 {/* the div containing the chat has to change */}
         <div className ={ props.user.id === props.msg.user_id ? "chatMessage-left": "chatMessage-right"}>
           <span className="chatMsg-avatarFrame">
-            <img src={props.user.image} alt="user image" />
+            <img src={props.user.image} alt="user" />
           </span>
           <p className= { props.user.id === props.msg.user_id ? "msgCon-left": "msgCon-right"}>
             {props.msg.content}

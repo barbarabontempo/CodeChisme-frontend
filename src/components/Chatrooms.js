@@ -20,18 +20,19 @@ export class Chatrooms extends Component {
   
 
   render() {
-    const {title, amtPeople} = this.props.chatObj
+    const {title} = this.props.chatObj
 
     return (
          
           <div className="chatRoom-dv bounce-6" onClick={this.handleRenderChatroom}>
           
           <div className="right-corner-label corner-ribbon sticky red"> 
-              <h2 onClick={this.handleClickRemove} class="fa fa-hand-scissors"></h2>      
+              <h2 onClick={this.handleClickRemove}>
+             <span className="fa fa-hand-scissors"
+              > </span>
+               </h2>      
           </div>
-          
-         
-         
+             
             <div  className="chatroom-header">
                   <h1> {title} </h1>
             </div>
