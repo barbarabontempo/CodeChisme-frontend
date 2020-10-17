@@ -73,7 +73,7 @@ export default class Imcontainer extends React.Component {
 
   render() {
     const {name, username, image} = this.props.user
-    console.log("object")
+    // console.log("object")
     return (
       <>
      <div className="im-container">
