@@ -72,8 +72,8 @@ export default class Imcontainer extends React.Component {
   
 
   render() {
-    const {name, username, image} = this.props.user
-    // console.log("object")
+    const {id, name, username, image} = this.props.user
+    // console.log("object", this.props.user)
     return (
       <>
      <div className="im-container">
@@ -91,7 +91,7 @@ export default class Imcontainer extends React.Component {
 
                
                 
-               <NewChatroomForm handleNewChat={this.handleNewChat}/>
+               <NewChatroomForm handleNewChat={this.handleNewChat} userId={id}/>
                <div className="sidebar-things"> 
                 <a > {this.props.loggedInStatus} <span className="fa fa-circle-o online"></span> </a>
                

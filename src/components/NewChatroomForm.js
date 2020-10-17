@@ -3,9 +3,10 @@ import axios from "axios";
 
 
 export default class NewChatroomForm extends Component {
+
   state = {
     title: "",
-    amtPeople: ""
+    amtPeople: "",
   };
 
   handleChange = (e) => {
@@ -15,21 +16,25 @@ export default class NewChatroomForm extends Component {
   };
 
   handleSubmit = (event) => {
+   
     event.preventDefault();
     axios
-      .post("http://localhost:3000/chatrooms", this.state)
+      .post("http://localhost:3000/chatrooms", {
+        ...this.state, 
+        userId: this.props.userId
+      })
       .then((response) => {
         this.props.handleNewChat(response);
       });
 
       this.setState(({
        title: "",
-       amtPeople: ""
+       amtPeople: "",
       }))
   };
 
   render() {
-    // console.log(this.props)
+   console.log("from line 35", this.props.state)
     return (
       <form className="chat-form" onSubmit={this.handleSubmit}>
       
