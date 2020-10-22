@@ -29,7 +29,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
  
 ## How To Use
 
-  When first starting up the application you will need to sign up with an username email and. password.To see websockets at work Open another Webpage under a diffrent account, make sure to. join the same chat room to see real time messaging. 
+  When first starting up the application you will need to sign up with an username email and password. To see websockets at work Open another Webpage under a diffrent account, make sure to. join the same chat room to see real time messaging. 
 
 ### Want to contribute?
 
