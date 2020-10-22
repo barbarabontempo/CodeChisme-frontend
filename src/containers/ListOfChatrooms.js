@@ -24,7 +24,10 @@ export default function ListOfChatrooms(props) {
             placeholder=" Search Chats"
           />
       </form>
+      <div className="chatroom-list">
+
       {handleIncomingChats()}
+      </div>
     </>
   );
 }

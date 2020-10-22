@@ -283,7 +283,11 @@ body {
   padding: 20px;
 }
 
-
+.chatroom-list{
+  height:590px;
+  overflow:scroll;
+  overflow-x:hidden;
+}
 .chatroom-page {
   /* border: solid red; */
  
