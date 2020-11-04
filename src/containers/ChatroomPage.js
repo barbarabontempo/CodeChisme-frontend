@@ -26,7 +26,6 @@ export class ChatroomPage extends Component {
 
   getSubscription(){
     if (this.subscription){
-  // console.log("UNSUBSCRIBING", this.state.username)
       this.subscription.unsubscribe()
     }
     this.subscription = consumer.subscriptions.create(
@@ -72,7 +71,6 @@ export class ChatroomPage extends Component {
   }
 
   render() {
-    // console.log("UNSUBSCRIBING", this.subscription)
     return (
       <div className="chatroom-page">
         

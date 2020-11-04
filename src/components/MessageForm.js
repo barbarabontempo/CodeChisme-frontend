@@ -20,7 +20,6 @@ export class MessageForm extends Component {
   };
 
   closeMenu = e => {
-    // console.log(this.emojiPicker);
     if (this.emojiPicker !== null && !this.emojiPicker.contains(e.target)) {
       this.setState(
         {
@@ -40,7 +39,6 @@ export class MessageForm extends Component {
   };
 
   addEmoji = e => {
-    // console.log(e.native);
     let emoji = e.native;
     this.setState({
       content: this.state.content + emoji

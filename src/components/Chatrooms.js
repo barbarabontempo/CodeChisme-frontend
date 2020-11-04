@@ -9,7 +9,6 @@ export class Chatrooms extends Component {
 
   handleClickRemove = (e) => {
 
-    // console.log("line11 chatroom", this.props)
    let msgId = this.props.chatObj.id
     axios.delete(`http://localhost:3000/chatrooms/${msgId}`)
     .then(res => {

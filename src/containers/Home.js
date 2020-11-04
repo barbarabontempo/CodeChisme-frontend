@@ -38,7 +38,7 @@ export default class Home extends Component {
         >
           <Login handleSuccessfulAuth={this.handleSuccessfulAuth} />
           <Registration handleSuccessfulAuth={this.handleSuccessfulAuth} />
-          {/* <h1>Status: {this.props.loggedInStatus}</h1> */}
+         
           <Overlay
             handleClickSignInButton={handleClickSignInButton}
             handleClickSignUpButton={handleClickSignUpButton}

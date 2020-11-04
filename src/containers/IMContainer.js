@@ -3,13 +3,11 @@ import axios from "axios";
 import ListOfChatrooms from "./ListOfChatrooms";
 import ChatroomPage from "./ChatroomPage";
 import NewChatroomForm from "../components/NewChatroomForm";
-// import { Button, Modal } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import consumer from '../cable'
 
 consumer.subscriptions.create({
   channel: "UsersChatroomsChannel",
-  // chatroom_id: 18,
   user_id: 7
 },{
   connected: () => console.log("IMCON connected"),
@@ -73,7 +71,6 @@ export default class Imcontainer extends React.Component {
 
   render() {
     const {id, name, username, image} = this.props.user
-    // console.log("object", this.props.user)
     return (
       <>
      <div className="im-container">

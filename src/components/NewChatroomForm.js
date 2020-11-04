@@ -34,7 +34,7 @@ export default class NewChatroomForm extends Component {
   };
 
   render() {
-   console.log("from line 35", this.props.state)
+  //  console.log("from line 35", this.props.state)
     return (
       <form className="chat-form" onSubmit={this.handleSubmit}>
       
